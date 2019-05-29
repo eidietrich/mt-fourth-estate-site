@@ -1,0 +1,3 @@
+// {{ $capitolbg := resources.Get "img/capitol-bw.jpeg" }}
+// {{ $capitolbg = $capitolbg | fingerprint }}
+$capitolbg: url("{{ $capitolbg.RelPermalink }}");

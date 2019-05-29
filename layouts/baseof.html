@@ -3,7 +3,13 @@
 <head>
   <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
   {{ $scssOptions := dict "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/bulma") }}
-  {{ $styles := resources.Get "css/main.scss" | toCSS $scssOptions | postCSS | minify | fingerprint }}
+
+  {{ $variablesCSS := resources.Get "css/variables.scss" }}
+  {{ $variablesCSS = $variablesCSS | resources.ExecuteAsTemplate "css/variables.scss" . }}
+  {{ $mainCSS := resources.Get "css/main.scss" }}
+  {{ $styles := slice $variablesCSS $mainCSS | resources.Concat "css/main.css" }}
+  {{ $styles = $styles | toCSS $scssOptions }}
+  {{ $styles = $styles | postCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
   <!-- Metadata -->
