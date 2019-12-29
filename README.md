@@ -14,3 +14,22 @@ All content copyright Spotlight PA. Code available under the MIT license. Photos
 - Run `yarn format` to format code
 - Run `yarn test` to test code
 - Run `yarn build:prod` to create a production build
+
+## Things to figure out
+* Image management
+* How to hook up CMS
+
+## TODOS
+* Add option for filtering partners by project (e.g. participated-in array field in data section, or participants field in project data)
+* Audio embed feature
+* Figure out how to do interstitial photos/video
+* Figure out how to manage Pym embeds --> Some sort of system with a "graphics" folder
+
+## Adding projects
+
+TODO: Figure out how to de-redundecize this, see if it's possible to work this out from CMS. Can participant data fields be replaced by data in project _index.md header? Can menus be calculated automatically?
+
+Current needs
+* Add section folder + content for stories
+* Add menu data
+* Add to data section

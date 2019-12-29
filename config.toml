@@ -5,6 +5,7 @@ enableRobotsTXT = true
 enableGitInfo = true
 rssLimit = 50
 
+# TODO: Change this to MTFP code
 googleAnalytics = "UA-141126362-1"
 
 [markup]
@@ -26,6 +27,7 @@ defaultMarkdownHandler = "blackfriday"
 [permalinks]
     press-releases = ":section/:year/:slug/"
     news = ":section/:year/:month/:slug/"
+    test = ":section/:slug/"
 
 [mediaTypes."text/netlify"]
     delimiter = ""
@@ -59,6 +61,7 @@ notAlternative = true
         "2019/11/banner-white-on-capitol.jpeg"
     ]
     description = "The mission of Spotlight PA is to hold powerful private and public forces across Pennsylvania — especially government, business and special interests — to account through urgent and compelling investigative journalism that leads to change and the betterment of democracy, the state and all who live here."
+    extra-footer = 'TK extra footer [language](https://montanafreepress.org)'
 
 [[module.mounts]]
 source = "assets"

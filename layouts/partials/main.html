@@ -1,4 +1,6 @@
 {{ $params := partialCached "page-params.html" .Page .RelPermalink }}
+{{ $postSection := .Section }}
+
 
 <section class="section">
   <article class="columns is-centered is-multiline">
@@ -31,23 +33,11 @@
             </h2>
           {{ end }}
 
-          {{ with $params.byline }}
-            <h3 class="is-size-5 has-margin-top-negative-medium">
-              <span class="has-text-weight-semibold">
-                by {{ $params.byline }}
-              </span>
-              {{ if $params.published }}
-                |
-                <time
-                  datetime='{{ $params.publishedISO }}'
-                >{{ $params.published }}</time>
-              {{ end }}
-            </h3>
-          {{ end }}
+          
 
-          <div class="has-margin-top has-margin-bottom">
+          <!-- <div class="has-margin-top has-margin-bottom">
             {{ partial "social-buttons.html" . }}
-          </div>
+          </div> -->
         </header>
       {{ end }}
 
@@ -57,12 +47,25 @@
         class="block"
         data-ga-action="Main content"
       >
+        {{ with $params.byline }}
+          <h3 class="is-size-5 has-margin-top-negative-medium">
+            <span class="has-text-weight-semibold">
+              By {{ $params.byline }}
+            </span>
+            {{ if $params.published }}
+              |
+              <time
+                datetime='{{ $params.publishedISO }}'
+              >{{ $params.published }}</time>
+            {{ end }}
+          </h3>
+        {{ end }}
         <div class="content">
           {{ .Content }}
         </div>
       </div>
 
-      {{ with .Param "authors" }}
+      <!-- {{ with .Param "authors" }}
         <footer
           class="block"
           data-ga-action="Author info"
@@ -130,12 +133,13 @@
             </div>
           {{ end }}
         </footer>
-      {{ end }}
+      {{ end }} -->
     </div>
   </article>
 
   {{ $news := .Site.GetPage "/news/_index.md" }}
-  {{ $related := $news.RegularPages.Related . | first 3 }}
+  <!-- {{ $related := $news.RegularPages.Related . | first 3 }} -->
+  {{ $related := .Site.RegularPages.Related . | first 3 }}
   {{ with $related }}
     <nav class="columns is-centered has-margin-top" data-ga-action="Related content">
       <div class="column is-three-fifths">
@@ -143,7 +147,7 @@
           <div class="tile is-parent is-top">
             <div class="tile is-child">
               <h2 class="title is-4 is-uppercase has-text-weight-semibold">
-                More Stories from Spotlight&nbsp;PA
+                More Stories
               </h2>
               <hr class="is-emphatic-underline has-margin-top-negative">
             </div>

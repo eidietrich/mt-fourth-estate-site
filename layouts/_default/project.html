@@ -1,11 +1,13 @@
 {{ define "extra-main" }}
   <section
     class="section columns is-centered is-multiline"
-    data-ga-action="News archive"
+    data-ga-action="Project archive"
   >
     <div class="column is-three-fifths">
+        
       <!-- Story list -->
       <div class="tile is-ancestor is-vertical">
+        
         {{ range $page := .Paginator.Pages }}
           {{ partial "tile-archive.html" $page }}
         {{ end }}

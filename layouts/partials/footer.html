@@ -13,7 +13,7 @@
   <div class="container">
     <div class="columns">
       <div class="column is-3">
-        <h3 class="has-text-weight-semibold is-uppercase">Spotlight PA</h3>
+        <h3 class="has-text-weight-semibold is-uppercase">Fourth Estate MT</h3>
         <ul>
           {{ range .Site.Menus.footer }}
             {{ template "footer-link" . }}
@@ -21,9 +21,9 @@
         </ul>
       </div>
       <div class="column is-3">
-        <h3 class="has-text-weight-semibold is-uppercase">About</h3>
+        <h3 class="has-text-weight-semibold is-uppercase">Projects</h3>
         <ul>
-          {{ range .Site.Menus.about }}
+          {{ range .Site.Menus.projects }}
             {{ template "footer-link" . }}
           {{ end }}
         </ul>
@@ -39,8 +39,7 @@
     </div>
     <p>&nbsp;</p>
     <p class="has-text-centered is-size-5">
-      &copy; {{ now.Format "2006" }}.<br>
-      All donations are made to the <a href="https://www.lenfestinstitute.org/">Lenfest Institute for Journalism</a>, a nonprofit tax-exempt organization under Section 501(c)(3) of the Internal Revenue Code, and directed to Spotlight PA’s important investigative work.
+      &copy; {{ now.Format "2006" }} Montana Fourth Estate Project.<br>
       {{ with .Param "extra-footer" }}
         <br>{{ .|markdownify }}
       {{ end }}

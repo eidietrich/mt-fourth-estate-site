@@ -1,32 +1,44 @@
 [[main]]
-name = "Our Mission"
+name = "About this Effort"
 pre = "is-uppercase"
-url = "/about/mission/"
+url = "/about/"
 weight = 1
 
 [[main]]
-name = "Our Team"
+name = "Graying Pains"
 pre = "is-uppercase"
-url = "/about/staff/"
+url = "/graying-pains/"
 weight = 2
 
 [[main]]
-name = "Supporters"
+name = "Project 2 TK"
 pre = "is-uppercase"
-url = "/support/"
+url = "/project-2/"
 weight = 3
 
 [[main]]
-name = "FAQ"
+name = "Project 3 TK"
 pre = "is-uppercase"
-url = "/about/faq/"
+url = "/project-3/"
 weight = 4
 
-[[main]]
-name = "Send a tip"
-pre = "is-uppercase"
-url = "/tips/"
-weight = 5
+# [[main]]
+# name = "Supporters"
+# pre = "is-uppercase"
+# url = "/support/"
+# weight = 3
+
+# [[main]]
+# name = "FAQ"
+# pre = "is-uppercase"
+# url = "/about/faq/"
+# weight = 4
+
+# [[main]]
+# name = "Send a tip"
+# pre = "is-uppercase"
+# url = "/tips/"
+# weight = 5
 
 [[footer]]
 name = "Home"
@@ -35,9 +47,9 @@ url = "/"
 weight = 1
 
 [[footer]]
-name = "Supporters"
+name = "About"
 pre = "is-uppercase"
-url = "/support/"
+url = "/about/"
 weight = 2
 
 [[footer]]
@@ -46,11 +58,11 @@ pre = "is-uppercase"
 url = "/contact/"
 weight = 3
 
-[[footer]]
-name = "Tips"
-pre = "is-uppercase"
-url = "/tips/"
-weight = 4
+# [[footer]]
+# name = "Tips"
+# pre = "is-uppercase"
+# url = "/tips/"
+# weight = 4
 
 [[footer]]
 name = "Press releases"
@@ -58,74 +70,98 @@ pre = "is-uppercase"
 url = "/press-releases/"
 weight = 5
 
-[[footer]]
-name = "Newsletters"
-pre = "is-uppercase"
-url = "/newsletters/"
-weight = 6
+# [[footer]]
+# name = "Newsletters"
+# pre = "is-uppercase"
+# url = "/newsletters/"
+# weight = 6
 
-[[footer]]
-name = "News Archive"
-pre = "is-uppercase"
-url = "/news/"
-weight = 7
+# [[footer]]
+# name = "News Archive"
+# pre = "is-uppercase"
+# url = "/news/"
+# weight = 7
 
-[[footer]]
-name = "Donate"
-pre = "is-uppercase"
-url = "/donate/"
-weight = 8
+# [[footer]]
+# name = "Donate"
+# pre = "is-uppercase"
+# url = "/donate/"
+# weight = 8
 
-[[about]]
-name = "About Us"
+[[projects]]
+name = "Graying Pains"
 pre = "is-uppercase"
-url = "/about/"
+url = "/graying-pains/"
 weight = 1
 
-[[about]]
-name = "Our Mission"
+[[projects]]
+name = "Project 2 TK"
 pre = "is-uppercase"
-url = "/about/mission/"
+url = "/project-2/"
 weight = 2
 
-[[about]]
-name = "Staff"
+[[projects]]
+name = "Project 3 TK"
 pre = "is-uppercase"
-url = "/about/staff/"
+url = "/project-3/"
 weight = 3
 
-[[about]]
-name = "Diversity"
-pre = "is-uppercase"
-url = "/about/diversity/"
-weight = 4
+# [[about]]
+# name = "About Us"
+# pre = "is-uppercase"
+# url = "/about/"
+# weight = 1
 
-[[about]]
-name = "FAQ"
-pre = ""
-url = "/about/faq/"
-weight = 5
+# [[about]]
+# name = "Our Mission"
+# pre = "is-uppercase"
+# url = "/about/mission/"
+# weight = 2
+
+# [[about]]
+# name = "Staff"
+# pre = "is-uppercase"
+# url = "/about/staff/"
+# weight = 3
+
+# [[about]]
+# name = "Diversity"
+# pre = "is-uppercase"
+# url = "/about/diversity/"
+# weight = 4
+
+# [[about]]
+# name = "FAQ"
+# pre = ""
+# url = "/about/faq/"
+# weight = 5
 
 [[social]]
-name = "Facebook"
+name = "Get updates"
 pre = "is-uppercase"
-url = "https://www.facebook.com/SpotlightPennsylvania"
+url = "TK"
 weight = 1
 
-[[social]]
-name = "Twitter"
-pre = "is-uppercase"
-url = "https://www.twitter.com/SpotlightPA"
-weight = 2
+# [[social]]
+# name = "Facebook"
+# pre = "is-uppercase"
+# url = "https://www.facebook.com/SpotlightPennsylvania"
+# weight = 1
 
-[[social]]
-name = "Google News"
-pre = "is-uppercase"
-url = "https://news.google.com/publications/CAAqBwgKMJOpkgswx-CnAw"
-weight = 3
+# [[social]]
+# name = "Twitter"
+# pre = "is-uppercase"
+# url = "https://www.twitter.com/SpotlightPA"
+# weight = 2
 
-[[social]]
-name = "Github"
-pre = "is-uppercase"
-url = "https://www.github.com/spotlightpa/"
-weight = 4
+# [[social]]
+# name = "Google News"
+# pre = "is-uppercase"
+# url = "https://news.google.com/publications/CAAqBwgKMJOpkgswx-CnAw"
+# weight = 3
+
+# [[social]]
+# name = "Github"
+# pre = "is-uppercase"
+# url = "https://www.github.com/spotlightpa/"
+# weight = 4

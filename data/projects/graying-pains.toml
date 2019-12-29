@@ -1,0 +1,8 @@
+# TODO: Wire this up
+# Also - see if there's a way to de-redundacize this
+name = "Graying Pains"
+pre = "is-uppercase"
+url = "/graying-pains/"
+weight = 5
+slug = "graying-pains"
+logotype = "svg"

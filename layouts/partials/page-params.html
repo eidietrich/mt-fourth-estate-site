@@ -1,9 +1,14 @@
+<!-- Byline management -->
 {{ $byline := "" }}
-{{ with .Param "authors" }}
+<!-- {{ with .Param "authors" }}
    {{ $byline = delimit . ", " " and " }}
-{{ end }}
+{{ end }} -->
 {{ with .Param "byline" }}
    {{ $byline = . }}
+{{ end }}
+{{ with .Param "publication" }}
+  <!-- join byline, publication -->
+  {{ $byline = delimit (slice $byline .) " / " }}
 {{ end }}
 
 {{ $kicker := .Param "kicker" }}

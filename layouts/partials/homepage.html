@@ -1,0 +1,80 @@
+{{ $news := .Site.GetPage "/news/_index.md" }}
+{{ $featuredStory := where $news.RegularPages ".Params.suppress-featured" "!=" true | first 1 }}
+{{ $related := where $news.RegularPages ".Params.special-report" true | complement $featuredStory}}
+{{ $features := append $related $featuredStory }}
+{{ $pages := $news.RegularPages | complement $featuredStory }}
+{{ $projects := sort .Site.Data.projects "order" "desc" }}
+<section class="section" data-ga-action="Homepage link">  
+    <div class="container-hp">
+    <div class="tile is-ancestor is-vertical">
+      <!-- Top story -->
+      <div style="border: 1px solid red; height: 200px; margin-bottom: 2em;">
+        Fourth Estate MT elevator pitch here
+      </div>
+      
+      <div style="border: 1px solid red; margin-bottom: 2em;">
+        Featured display, current project
+        {{ range $data := first 1 $projects }}
+          {{ $project := newScratch }}
+          {{ $project.Set "url" .url }}
+          {{ $project.Set "name" .name }}
+          {{ $project.Set "logotype" .logotype }}
+          {{ printf "img/projects/%s.%s" .slug .logotype | $project.Set "logo" }}
+          {{ partial "project-banner-homepage-featured.html" $project }}
+        
+        {{ end }}
+      </div>
+
+      <!-- Newsletter signup section -->
+      <!-- <div class="tile">
+        <div class="tile is-2"></div>
+        <div class="tile is-parent is-8">
+          <div class="tile is-child" data-ga-form='{"eventCategory": "Newsletter signup", "eventAction": "Homepage inline"}'>
+            {{ partial "newsletter-box.html" . }}
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="tile">
+        <div class="column is-three-fifths is-offset-one-fifth">
+          {{ range sort .Site.Data.projects "order" "desc" }}
+            {{ $nameID := urlize .name }}
+            {{ $url := .url }}
+              <div
+                id="{{ $nameID }}"
+                class="card block"
+              >
+                <div class="card-content">
+                  <p class="title is-3">{{ .name }}</p>
+                  <p class="subtitle is-4">{{ .url }}</p>
+                </div>
+              </div>
+          {{ end }}
+        </div>
+      </div> -->
+
+
+      <!-- More projects section -->
+      {{ if gt (len $projects) 1 }}
+        <div class="tile">
+          <div class="tile is-parent is-top is-8">
+            <div class="tile is-child">
+              <h2 class="title is-4 is-uppercase has-text-weight-semibold">
+                Other projects
+              </h2>
+              <hr class="is-emphatic-underline has-margin-top-negative">
+            </div>
+          </div>
+        </div>
+        {{ range $project := after 1 $projects }}
+          {{ $project := newScratch }}
+          {{ $project.Set "url" .url }}
+          {{ $project.Set "name" .name }}
+          {{ $project.Set "logotype" .logotype }}
+          {{ printf "img/projects/%s.%s" .slug .logotype | $project.Set "logo" }}
+          {{ partial "project-banner-homepage-non-featured.html" $project }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
