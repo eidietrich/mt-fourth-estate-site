@@ -9,7 +9,7 @@ show_preview_links: true
 
 backend:
   name: github
-  repo: spotlightpa/poor-richard
+  repo: eidietrich/mt-fourth-estate-site
   branch: master
 
 yaml-definitions: &page-fields
