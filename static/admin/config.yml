@@ -1,9 +1,9 @@
 media_folder: assets/img/uploads
 public_folder: /img/uploads
 
-site_url: https://www.spotlightpa.org
-display_url: https://www.spotlightpa.org
-logo_url: https://www.spotlightpa.org/img/logos/banner-share-5000.png
+# site_url: https://www.spotlightpa.org
+# display_url: https://www.spotlightpa.org
+# logo_url: https://www.spotlightpa.org/img/logos/banner-share-5000.png
 
 show_preview_links: true
 
@@ -13,11 +13,40 @@ backend:
   branch: master
 
 yaml-definitions: &page-fields
-  - label: Draft
-    name: draft
-    widget: boolean
-    hint: "Content will not show up on site, but will be publically available on Github. Do not save embargoed material."
-    default: true
+  # - label: Draft
+  #   name: draft
+  #   widget: boolean
+  #   hint: "Content will not show up on site, but will be publically available on Github. Do not save embargoed material."
+  #   default: true
+  #   required: false
+  - label: Hed
+    name: title
+    hint: "Title as it appears at top of page"
+    widget: string
+  - label: Subhed
+    name: subtitle
+    widget: string
+    hint: "Appears below hed at top of page; AKA dek"
+    required: false
+  - label: Kicker
+    name: kicker
+    hint: "Small text appearing above the page headline, e.g. Health"
+    widget: string
+    required: false
+  - label: Summary
+    name: description
+    hint: "Shown in social share previews and search results"
+    widget: string
+    required: false
+  - label: Blurb
+    name: dek
+    hint: "Summary to appear in article rivers (home/landing page)"
+    widget: string
+    required: false
+  - label: Date
+    name: published
+    widget: datetime
+    hint: "Note that future dated articles will not be published on the live site"
     required: false
   - label: "Featured Image"
     name: "image"
@@ -39,111 +68,85 @@ yaml-definitions: &page-fields
     widget: "select"
     options: ["full", "inline", "hidden"]
     required: false
-  - label: Date
-    name: published
-    widget: datetime
-    hint: "Note that future dated articles will not be published on the live site"
-    required: false
-  - label: Authors
-    label_singular: author
-    name: authors
-    widget: list
-    default: []
-    field:
-      label: Name
-      hint: "Full name as listed in data profile"
-      widget: string
+  
+  # - label: Authors
+  #   label_singular: author
+  #   name: authors
+  #   widget: list
+  #   default: []
+  #   field:
+  #     label: Name
+  #     hint: "Full name as listed in data profile"
+  #     widget: string
   - label: Byline
     name: byline
-    hint: "If present, overrides the byline created from authors list"
     widget: string
-    required: false
-  - label: Hed
-    name: title
-    hint: "Title as it appears at top of page"
-    widget: string
-  - label: Subhed
-    name: subtitle
-    widget: string
-    hint: "Appears below hed at top of page; AKA dek"
-    required: false
-  - label: Summary
-    name: description
-    hint: "Shown in social share previews and search results"
-    widget: string
-    required: false
-  - label: Blurb
-    name: dek
-    hint: "Summary to appear in article rivers"
-    widget: string
-    required: false
-  - label: Kicker
-    name: kicker
-    hint: "Small text appearing above the page headline, e.g. Health"
+  - label: Publication
+    name: publication
     widget: string
     required: false
   - label: Body
     name: body
     widget: markdown
-  - label: "Override title tag"
-    name: title-tag
-    widget: string
-    hint: "Set title tag separately from page hed"
-    required: false
-  - label: Link to as
-    name: linktitle
-    hint: "When linking to this page from another page, use this as the link title instead of hed"
-    widget: string
-    required: false
-  - label: Special Report
-    name: special-report
-    widget: boolean
-    hint: "Add 'special report' label on homepage"
-    default: false
-    required: false
-  - label: Suppress in featured slot
-    name: suppress-featured
-    widget: boolean
-    hint: "Don't make this the top story on the homepage"
-    default: false
-    required: false
-  - label: "Suppress title"
-    name: suppress-title
-    widget: boolean
-    hint: "Don't show title in content area"
-    required: false
-  - label: "Hide newsletters pop-up"
-    name: modal-exclude
-    widget: boolean
-    hint: "Don't show newsletters modal screen on this page"
-    required: false
-  - label: "No index"
-    name: no-index
-    hint: "Hide page on Google etc."
-    widget: boolean
-    required: false
-  - label: Slug
-    name: slug
-    widget: string
-    required: false
-  - label: Footer text
-    name: extra-footer
-    hint: "Extra text to place after copyright message of page"
-    widget: string
-    required: false
-  - label: "Override URL"
-    name: url
-    widget: string
-    required: false
-  - label: Aliases
-    label_singular: alias
-    name: aliases
-    widget: list
-    default: []
-    field:
-      label: Path
-      name: path
-      widget: string
+  # - label: "Override title tag"
+  #   name: title-tag
+  #   widget: string
+  #   hint: "Set title tag separately from page hed"
+    # required: false
+  # - label: Link to as
+  #   name: linktitle
+  #   hint: "When linking to this page from another page, use this as the link title instead of hed"
+  #   widget: string
+  #   required: false
+  # - label: Special Report
+  #   name: special-report
+  #   widget: boolean
+  #   hint: "Add 'special report' label on homepage"
+  #   default: false
+  #   required: false
+  # - label: Suppress in featured slot
+  #   name: suppress-featured
+  #   widget: boolean
+  #   hint: "Don't make this the top story on the homepage"
+  #   default: false
+  #   required: false
+  # - label: "Suppress title"
+  #   name: suppress-title
+  #   widget: boolean
+  #   hint: "Don't show title in content area"
+  #   required: false
+  # - label: "Hide newsletters pop-up"
+  #   name: modal-exclude
+  #   widget: boolean
+  #   hint: "Don't show newsletters modal screen on this page"
+  #   required: false
+  # - label: "No index"
+  #   name: no-index
+  #   hint: "Hide page on Google etc."
+  #   widget: boolean
+  #   required: false
+  # - label: Slug
+  #   name: slug
+  #   widget: string
+  #   required: false
+  # - label: Footer text
+  #   name: extra-footer
+  #   hint: "Extra text to place after copyright message of page"
+  #   widget: string
+  #   required: false
+  # - label: "Override URL"
+  #   name: url
+  #   widget: string
+  #   required: false
+  # - label: Aliases
+  #   label_singular: alias
+  #   name: aliases
+  #   widget: list
+  #   default: []
+  #   field:
+  #     label: Path
+  #     name: path
+  #     widget: string
   - label: type
     name: type
     widget: hidden
@@ -154,6 +157,30 @@ yaml-definitions: &page-fields
     required: false
 
 collections:
+  - label: Graying Pains
+    name: graying-pains
+    folder: content/graying-pains
+    fields: *page-fields
+    slug: "{{slug}}"
+    format: toml-frontmatter
+    extension: md
+    create: true
+
+  - label: Project 2
+    name: project-2
+    folder: content/project-2
+    fields: *page-fields
+    format: toml-frontmatter
+    extension: md
+    create: true
+  - label: Project 3
+    name: project-3
+    folder: content/project-3
+    fields: *page-fields
+    format: toml-frontmatter
+    extension: md
+    create: true
+
   - label: Articles
     label_singular: Article
     name: news
