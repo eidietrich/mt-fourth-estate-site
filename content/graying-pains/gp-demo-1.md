@@ -1,6 +1,6 @@
 ---
 title: Graying Pains demo story 1
-subtitle: Subtitle - this is optional
+subtitle: This has been updated
 kicker: Top term
 description: Description TK
 dek: Dek TK
