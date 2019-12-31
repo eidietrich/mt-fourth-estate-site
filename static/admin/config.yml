@@ -165,7 +165,6 @@ collections:
     format: toml-frontmatter
     extension: md
     create: true
-
   - label: Project 2
     name: project-2
     folder: content/project-2

@@ -5,7 +5,7 @@ kicker: Top term
 description: Description TK
 dek: Dek TK
 published: 2019-12-27T11:07:00.000Z
-image: ''
+image: "2019/11/walking.jpg"
 image-description: Image description TK
 image-credit: Credit TK
 byline: John Doe
