@@ -1,21 +1,16 @@
-+++
-title = "Graying Pains demo story 1"
-subtitle = "Subtitle - this is optional"
-kicker = "Top term"
-
-description = "Description TK"
-dek = "Dek TK"
-
-published = 2019-12-27T11:07:00Z
-
-image = "2019/11/walking.jpg"
-image-credit = "Image credit"
-image-description = "Image description TK"
-image-size = "inline"
-
-byline = "John Doe"
-publication = "Montana Free Press"
-+++
+---
+title: Graying Pains demo story 1
+subtitle: Subtitle - this is optional
+kicker: Top term
+description: Description TK
+dek: Dek TK
+published: 2019-12-27T11:07:00.000Z
+image: ''
+image-description: Image description TK
+image-credit: Credit TK
+byline: John Doe
+publication: Montana Free Press
+---
 
 This here is Graying Pains intro piece.
 
