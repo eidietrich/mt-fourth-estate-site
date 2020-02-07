@@ -1,0 +1,10 @@
+<div class="columns is-multiline is-centered">
+    {{ range .Site.Data.partners.backers }}
+      {{ $backer := newScratch }}
+      {{ $backer.Set "url" .url }}
+      {{ $backer.Set "name" .name }}
+      {{ $backer.Set "logotype" .logotype }}
+      {{ printf "img/partners/%s.%s" .slug .logotype | $backer.Set "logo" }}
+      {{ partial "logo-column.html" $backer }}
+    {{ end }}
+  </div>

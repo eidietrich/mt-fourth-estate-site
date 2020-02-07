@@ -1,7 +1,8 @@
 +++
 linktitle = "Home"
-title = "Investigative journalism for Pennsylvania"
-subtitle = "Together, we can hold the powerful to account."
-description = "Spotlight PA: Find Pennsylvania news and investigations about state and local governments, businesses and special interests."
-title-tag = "The Montana Fourth Estate | TK tagline"
+title = "The Montana Fourth Estate collaboration"
+subtitle = ""
+tagline = "Montana news outlets teaming up to tackle the state's toughest issues by investigating solutions."
+description = "The Montana Fourth Estate: Montana news outlets teaming up to tackle the state's toughest issues by investigating solutions"
+title-tag = "The Montana Fourth Estate"
 +++

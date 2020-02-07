@@ -1,26 +1,32 @@
 [[main]]
-name = "About this Effort"
+name = "Home"
+pre = "is-uppercase"
+url = "/"
+weight = 1
+
+[[main]]
+name = "About"
 pre = "is-uppercase"
 url = "/about/"
-weight = 1
+weight = 2
 
 [[main]]
 name = "Graying Pains"
 pre = "is-uppercase"
 url = "/graying-pains/"
-weight = 2
+weight = 3
 
 [[main]]
 name = "Project 2 TK"
 pre = "is-uppercase"
 url = "/project-2/"
-weight = 3
+weight = 4
 
 [[main]]
 name = "Project 3 TK"
 pre = "is-uppercase"
 url = "/project-3/"
-weight = 4
+weight = 5
 
 # [[main]]
 # name = "Supporters"
@@ -64,11 +70,11 @@ weight = 3
 # url = "/tips/"
 # weight = 4
 
-[[footer]]
-name = "Press releases"
-pre = "is-uppercase"
-url = "/press-releases/"
-weight = 5
+# [[footer]]
+# name = "Press releases"
+# pre = "is-uppercase"
+# url = "/press-releases/"
+# weight = 5
 
 # [[footer]]
 # name = "Newsletters"

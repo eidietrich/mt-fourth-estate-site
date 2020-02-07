@@ -1,29 +1,133 @@
 [[partners]]
-name = "Philadelphia Inquirer"
-slug = "inquirer"
-url = "https://www.inquirer.com"
+name = "Yellowstone Public Radio"
+slug = "yellowstone-public-radio"
+url = "https://ypradio.org"
+logotype = "png"
+
+[[partners]]
+name = "Valley Journal"
+slug = "valley-journal"
+url = "http://www.valleyjournal.net/"
+logotype = "png"
+
+[[partners]]
+name = "Sidney Herald"
+slug = "sidney-herald"
+url = "https://www.sidneyherald.com/"
+logotype = "png"
+
+[[partners]]
+name = "Glendive Ranger-Review"
+slug = "glendive-ranger-review"
+url = "https://www.rangerreview.com/"
+logotype = "png"
+
+[[partners]]
+name = "Seeley Swan Pathfinder"
+slug = "seeley-swan-pathfinder"
+url = "https://www.seeleylake.com/"
+logotype = "png"
+
+
+[[partners]]
+name = "Northern Plains Independent"
+slug = "northern-plains-independent"
+url = "mailto:independent@nemont.net"
+logotype = "png"
+
+[[partners]]
+name = "Boulder Monitor"
+slug = "boulder-monitor"
+url = "https://www.boulder-monitor.com/"
 logotype = "svg"
 
 [[partners]]
-name = "Pittsburgh Post-Gazette"
-slug = "post-gazette"
-url = "https://www.post-gazette.com"
+name = "Missoulian"
+slug = "missoulian"
+url = "https://missoulian.com/"
 logotype = "svg"
 
 [[partners]]
-name = "PennLive"
-slug = "pennlive"
-url = "https://www.pennlive.com"
-logotype = "svg"
+name = "Miles City Star"
+slug = "miles-city-star"
+url = "https://www.milescitystar.com/"
+logotype = "png"
 
 [[partners]]
-name = "LNP Media Group"
-slug = "lnp"
-url = "https://lnpmediagroup.com"
-logotype = "svg"
+name = "Madisonian"
+slug = "madisonian"
+url = "http://www.madisoniannews.com/"
+logotype = "png"
 
 [[partners]]
-name = "PA Post"
-slug = "papost"
-url = "https://papost.org"
-logotype = "svg"
+name = "Lone Peak Lookout"
+slug = "lone-peak-lookout"
+url = "http://www.lonepeaklookout.com/"
+logotype = "png"
+
+[[partners]]
+name = "University of Montana School of Journalism"
+slug = "um-journalism"
+url = "https://jour.umt.edu/"
+logotype = "png"
+
+[[partners]]
+name = "Helena Independent Record"
+slug = "helena-ir"
+url = "https://helenair.com/"
+logotype = "png"
+
+[[partners]]
+name = "Flathead Beacon"
+slug = "flathead-beacon"
+url = "https://flatheadbeacon.com/"
+logotype = "png"
+
+[[partners]]
+name = "Choteau Acantha"
+slug = "choteau-acantha"
+url = "http://www.choteauacantha.com/"
+logotype = "png"
+
+[[partners]]
+name = "Bozeman Daily Chronicle"
+slug = "bozeman-daily-chronicle"
+url = "https://www.bozemandailychronicle.com/"
+logotype = "png"
+
+[[partners]]
+name = "Billings Gazette"
+slug = "billings-gazette"
+url = "https://billingsgazette.com/"
+logotype = "png"
+
+[[coordinators]]
+name = "Montana Free Press"
+slug = "montana-free-press"
+url = "https://montanafreepress.org/"
+logotype = "png"
+
+# For backers section on about page
+[[backers]]
+name = "Solutions Journalism Network"
+slug = "solutions-journalism-network"
+url = "https://www.solutionsjournalism.org/"
+logotype = "png"
+
+[[backers]]
+name = "Montana Newspaper Association"
+slug = "montana-newspaper-association"
+url = "https://www.mtnewspapers.com/"
+logotype = "png"
+
+[[backers]]
+name = "LOR Foundation"
+slug = "lor-foundation"
+url = "https://lorfoundation.org/"
+logotype = "png"
+
+[[backers]]
+name = "Kendeda Fund"
+slug = "kendeda-fund"
+url = "https://kendedafund.org/"
+logotype = "png"

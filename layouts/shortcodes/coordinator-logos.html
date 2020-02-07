@@ -1,0 +1,10 @@
+<div class="columns is-multiline is-centered">
+    {{ range .Site.Data.partners.coordinators }}
+      {{ $coordinator := newScratch }}
+      {{ $coordinator.Set "url" .url }}
+      {{ $coordinator.Set "name" .name }}
+      {{ $coordinator.Set "logotype" .logotype }}
+      {{ printf "img/partners/%s.%s" .slug .logotype | $coordinator.Set "logo" }}
+      {{ partial "big-logo-column.html" $coordinator }}
+    {{ end }}
+  </div>

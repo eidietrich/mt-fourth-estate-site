@@ -39,7 +39,8 @@
     </div>
     <p>&nbsp;</p>
     <p class="has-text-centered is-size-5">
-      &copy; {{ now.Format "2006" }} Montana Fourth Estate Project.<br>
+      &copy; {{ now.Format "2006" }} Montana Fourth Estate Project
+      <br>
       {{ with .Param "extra-footer" }}
         <br>{{ .|markdownify }}
       {{ end }}

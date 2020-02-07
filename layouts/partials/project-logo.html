@@ -1,0 +1,17 @@
+{{ $logo := resources.Get (.Get "logo") }}
+{{ $logotype := .Get "logotype" | default "png"}}
+{{ $name := .Get "name" | default "Project logo"}}
+{{ $url := .Get "url" }}
+<div style="max-width: 400px">
+    {{ if eq $logotype "svg" }}
+        <div class="is-sr-only">Logo for {{ $name }}</div>
+    {{ $logo.Content| safeHTML }}
+    {{ else }}
+    {{ $logo = $logo.Resize "x400" | fingerprint }}
+    <img
+        src="{{ $logo.RelPermalink }}"
+        alt="Logo for {{ $name }}"
+        style="max-height: 200px;"
+    >
+    {{ end }}
+</div>

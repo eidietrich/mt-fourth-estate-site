@@ -1,6 +1,6 @@
-baseURL = "https://www.spotlightpa.org/"
+baseURL = "https://www.montanafourthestate.org/"
 languageCode = "en-us"
-title = "Spotlight PA"
+title = "Montana Fourth Estate Project"
 enableRobotsTXT = true
 enableGitInfo = true
 rssLimit = 50
@@ -60,8 +60,8 @@ notAlternative = true
     images = [
         "2019/11/banner-white-on-capitol.jpeg"
     ]
-    description = "The mission of Spotlight PA is to hold powerful private and public forces across Pennsylvania — especially government, business and special interests — to account through urgent and compelling investigative journalism that leads to change and the betterment of democracy, the state and all who live here."
-    extra-footer = 'TK extra footer [language](https://montanafreepress.org)'
+    description = "Description TK"
+    extra-footer = ""
 
 [[module.mounts]]
 source = "assets"

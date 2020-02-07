@@ -1,7 +1,7 @@
 {{ $params := partialCached "page-params.html" .Page .RelPermalink }}
 
 <article class="tile is-vertical is-bottom">
-  {{ if .Page.Param "image" }}
+  {{/*  {{ if .Page.Param "image" }}
   <div class="tile">
     <div class="tile is-parent is-top">
       <div class="tile is-child is-hidden-tablet-only">
@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  {{ end }}
+  {{ end }}  */}}
   <div class="tile is-bottom">
     <div class="tile is-parent is-4 is-top-tablet is-hidden-tablet-only">
       <div class="tile is-child">
@@ -38,20 +38,22 @@
         </h2>
         {{ if $params.byline }}
           <h3 class="subtitle has-margin-top-negative-medium is-5 has-text-weight-normal">
-            <a href="{{ .RelPermalink }}" class="has-text-grey hover-underline">
+            by {{ $params.byline }}
+            {{/*  <a href="{{ .RelPermalink }}" class="has-text-grey hover-underline">
               by {{ $params.byline }}
-            </a>
+            </a>  */}}
           </h3>
+          <div>{{ $params.description }}</div>
         {{ end }}
         {{- if $params.published }}
           <h3
             class="subtitle has-margin-top-negative-medium is-5 has-text-weight-normal"
           >
-            <a href="{{ .RelPermalink }}" class="has-text-grey hover-underline">
+            {{/*  <a href="{{ .RelPermalink }}" class="has-text-grey hover-underline">
               <time
                 datetime='{{ $params.publishedISO }}'
               >{{ $params.published }}</time>
-            </a>
+            </a>  */}}
           </h3>
         {{- end -}}
       </div>

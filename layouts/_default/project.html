@@ -1,4 +1,53 @@
+{{ define "before-main" }}
+  {{ $logoPath := printf "img/projects/%s.%s" .Params.logoslug .Params.logotype }}
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-two-fifths">
+        {{ $project := newScratch }}
+        {{ $logoPath | $project.Set "logo" }}
+        {{ .Params.logotype | $project.Set "logotype" }}
+        {{ partial "project-logo" $project }}
+      </div>
+      <div class="column is-two-fifths">
+        <div class="is-size-4">{{ .Content }}</div>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+{{ define "main" }}
+  {{ $stories := .Paginator.Pages }}
+  {{ $featured := first 1 $stories }}
+  {{ $pinned := where ($stories | complement $featured)  "Params.pinned" true }}
+
+  <section class="section">
+    <article class="columns is-centered is-multiline">
+      <div class="column is-half" style="border: 3px solid #d6b87f;">
+        {{ range $page := $featured }}
+          {{ partial "featured-story-tile.html" $page }}
+        {{ end }}
+      </div>
+      {{ with $pinned }}
+        <div class="column is-one-quarter is-ancestor" style="background: #d6b87f;">  
+          <div class="tile is-parent is-vertical">
+            {{ range $page := . }}
+              {{ partial "pinned-story-tile.html" $page }}
+            {{ end }}
+          </div>        
+        </div>
+      {{ end }}
+    </article>
+    <hr />
+  </section>
+{{ end }}
+
 {{ define "extra-main" }}
+  {{ $stories := sort .Paginator.Pages "Params.order" }}
+  {{ $featured := first 1 $stories  }}
+  {{ $pinned :=  where $stories  "Params.pinned" true }}
+  {{ $others := $stories | complement $featured $pinned }}
+  {{ $paginator := .Paginate $others}}
+
   <section
     class="section columns is-centered is-multiline"
     data-ga-action="Project archive"
@@ -8,14 +57,14 @@
       <!-- Story list -->
       <div class="tile is-ancestor is-vertical">
         
-        {{ range $page := .Paginator.Pages }}
+        {{ range $page := $others }}
           {{ partial "tile-archive.html" $page }}
         {{ end }}
       </div>
       <!-- Pagination -->
-      {{ if gt .Paginator.TotalPages 0 }}
+      {{ if gt $paginator.TotalPages 0 }}
         <div class="level">
-        {{ if .Paginator.HasPrev }}
+        {{ if $paginator.HasPrev }}
           <span class="level-item">
             <a
               class="button is-primary is-outlined has-text-weight-semibold"
@@ -23,7 +72,7 @@
             >← Newer</a>
           </span>
         {{ end }}
-        {{ if .Paginator.HasNext }}
+        {{ if $paginator.HasNext }}
           <span class="level-item">
             <a
               class="button is-primary is-outlined has-text-weight-semibold"

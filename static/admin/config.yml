@@ -68,7 +68,7 @@ yaml-definitions: &page-fields
     widget: "select"
     options: ["full", "inline", "hidden"]
     required: false
-  
+
   # - label: Authors
   #   label_singular: author
   #   name: authors
@@ -88,65 +88,88 @@ yaml-definitions: &page-fields
   - label: Body
     name: body
     widget: markdown
-  # - label: "Override title tag"
-  #   name: title-tag
-  #   widget: string
-  #   hint: "Set title tag separately from page hed"
-    # required: false
-  # - label: Link to as
-  #   name: linktitle
-  #   hint: "When linking to this page from another page, use this as the link title instead of hed"
-  #   widget: string
-  #   required: false
-  # - label: Special Report
-  #   name: special-report
-  #   widget: boolean
-  #   hint: "Add 'special report' label on homepage"
-  #   default: false
-  #   required: false
-  # - label: Suppress in featured slot
-  #   name: suppress-featured
-  #   widget: boolean
-  #   hint: "Don't make this the top story on the homepage"
-  #   default: false
-  #   required: false
-  # - label: "Suppress title"
-  #   name: suppress-title
-  #   widget: boolean
-  #   hint: "Don't show title in content area"
-  #   required: false
-  # - label: "Hide newsletters pop-up"
-  #   name: modal-exclude
-  #   widget: boolean
-  #   hint: "Don't show newsletters modal screen on this page"
-  #   required: false
-  # - label: "No index"
-  #   name: no-index
-  #   hint: "Hide page on Google etc."
-  #   widget: boolean
-  #   required: false
-  # - label: Slug
-  #   name: slug
-  #   widget: string
-  #   required: false
-  # - label: Footer text
-  #   name: extra-footer
-  #   hint: "Extra text to place after copyright message of page"
-  #   widget: string
-  #   required: false
-  # - label: "Override URL"
-  #   name: url
-  #   widget: string
-  #   required: false
-  # - label: Aliases
-  #   label_singular: alias
-  #   name: aliases
-  #   widget: list
-  #   default: []
-  #   field:
-  #     label: Path
-  #     name: path
-  #     widget: string
+
+  - label: "Override title tag"
+    name: title-tag
+    widget: string
+    hint: "Set title tag separately from page hed"
+    required: false
+  - label: Link to as
+    name: linktitle
+    hint: "When linking to this page from another page, use this as the link title instead of hed"
+    widget: string
+    required: false
+  - label: Special Report
+    name: special-report
+    widget: boolean
+    hint: "Add 'special report' label on homepage"
+    default: false
+    required: false
+  - label: Suppress in featured slot
+    name: suppress-featured
+    widget: boolean
+    hint: "Don't make this the top story on the homepage"
+    default: false
+    required: false
+  - label: "Suppress title"
+    name: suppress-title
+    widget: boolean
+    hint: "Don't show title in content area"
+    required: false
+  - label: "Hide newsletters pop-up"
+    name: modal-exclude
+    widget: boolean
+    hint: "Don't show newsletters modal screen on this page"
+    required: false
+  - label: "No index"
+    name: no-index
+    hint: "Hide page on Google etc."
+    widget: boolean
+    required: false
+  - label: Slug
+    name: slug
+    widget: string
+    required: false
+  - label: Footer text
+    name: extra-footer
+    hint: "Extra text to place after copyright message of page"
+    widget: string
+    required: false
+  - label: "Override URL"
+    name: url
+    widget: string
+    required: false
+  - label: Aliases
+    label_singular: alias
+    name: aliases
+    widget: list
+    default: []
+    field:
+      label: Path
+      name: path
+      widget: string
+
+  - label: type
+    name: type
+    widget: hidden
+    required: false
+  - label: section
+    name: section
+    widget: hidden
+    required: false
+
+    # THIS ISN'T WORKING
+yaml-definitions-2: &static-page-fields
+  - label: "URL path (e.g., /about)"
+    name: url
+    widget: string
+  - label: Hed
+    name: title
+    hint: "Title as it appears at top of page"
+    widget: string
+  - label: Body
+    name: body
+    widget: markdown
   - label: type
     name: type
     widget: hidden
@@ -204,6 +227,7 @@ collections:
     editor:
       preview: false
     fields: *page-fields
+
   - label: About pages
     name: about
     folder: content/about
@@ -215,179 +239,178 @@ collections:
     editor:
       preview: false
     fields: *page-fields
-  - label: "Press Releases"
-    label_singular: "Press Release"
-    name: press-releases
-    folder: content/press-releases
-    format: toml-frontmatter
-    extension: md
-    create: true
-    preview_path: "/press-releases/{{slug}}/"
-    editor:
-      preview: false
-    fields: *page-fields
-  - label: Authors
-    label_singular: Author
-    name: authors
-    folder: data/authors
-    format: toml
-    extension: toml
-    create: true
-    preview_path: /about/staff/
-    identity_field: name
-    editor:
-      preview: false
-    fields:
-      - label: Name
-        name: name
-        widget: string
-      - label: Title
-        name: title
-        widget: string
-      - label: Email
-        name: email
-        widget: string
-        required: false
-      - label: Twitter
-        name: twitter
-        widget: string
-        required: false
-      - label: Content
-        name: content
-        widget: markdown
-      - label: Order
-        name: weight
-        hint: "Order to put on staff page"
-        widget: number
-        valueType: int
-        required: true
-      - label: Active
-        name: active
-        hint: "Is this author still working for Spotlight PA?"
-        widget: boolean
-        required: true
-
-  - label: Other
-    name: data
-    editor:
-      preview: false
-    files:
-      - label: "Sitewide settings"
-        name: sitewide
-        file: config/_default/params.toml
-        format: toml-frontmatter
-        fields:
-          - label: Banner
-            name: banner
-            hint: "Sitewide alert banner"
-            widget: markdown
-            required: false
-          - label: "Banner link"
-            name: banner-link
-            hint: "Sitewide alert banner clickthrough link"
-            widget: string
-            required: false
-          - label: "Show banner"
-            name: banner-active
-            hint: "Show sitewide alert banner"
-            widget: boolean
-            default: false
-      - label: "News landing page"
-        name: news-landing
-        file: content/news/_index.md
-        format: toml-frontmatter
-        fields:
-          - label: Title
-            name: title
-            widget: string
-          - label: Description
-            name: description
-            widget: string
-          - label: Body
-            name: body
-            widget: markdown
-      - label: "Press release landing page"
-        name: press-release
-        file: content/press-releases/_index.md
-        format: toml-frontmatter
-        fields:
-          - label: Title
-            name: title
-            widget: string
-          - label: Description
-            name: description
-            widget: string
-          - label: Body
-            name: body
-            widget: markdown
-      - label: Profiles
-        name: profiles
-        file: data/profiles.toml
-        fields:
-          - label: "Team members"
-            label_singular: Member
-            name: profiles
-            widget: list
-            fields:
-              - label: Name
-                name: name
-                widget: string
-              - label: Title
-                name: title
-                widget: string
-              - label: Email
-                name: email
-                widget: string
-                required: false
-              - label: Twitter
-                name: twitter
-                widget: string
-                required: false
-              - label: Content
-                name: content
-                widget: markdown
-      - label: Menus
-        name: menus
-        file: config/_default/menus.toml
-        fields:
-          - label: "Main menu items"
-            label_singular: "menu item"
-            name: main
-            hint: "Navbar main menu"
-            widget: list
-            fields: &menu
-              - label: "Display Name"
-                name: name
-                widget: string
-                required: true
-              - label: URL
-                name: url
-                widget: string
-                required: true
-              - label: "CSS class"
-                name: pre
-                widget: string
-                required: false
-              - label: Order
-                name: weight
-                widget: number
-                valueType: int
-                required: false
-          - label: "Footer menu items"
-            label_singular: "menu item"
-            name: footer
-            hint: "Footer pages list, first column"
-            widget: list
-            fields: *menu
-          - label: "Footer about menu items"
-            label_singular: "menu item"
-            name: about
-            hint: "Footer pages list, about column"
-            widget: list
-            fields: *menu
-          - label: "Social menu items"
-            label_singular: "menu item"
-            name: social
-            hint: "Footer social links"
-            widget: list
-            fields: *menu
+  # - label: "Press Releases"
+  #   label_singular: "Press Release"
+  #   name: press-releases
+  #   folder: content/press-releases
+  #   format: toml-frontmatter
+  #   extension: md
+  #   create: true
+  #   preview_path: "/press-releases/{{slug}}/"
+  #   editor:
+  #     preview: false
+  #   fields: *page-fields
+  # - label: Authors
+  #   label_singular: Author
+  #   name: authors
+  #   folder: data/authors
+  #   format: toml
+  #   extension: toml
+  #   create: true
+  #   preview_path: /about/staff/
+  #   identity_field: name
+  #   editor:
+  #     preview: false
+  #   fields:
+  #     - label: Name
+  #       name: name
+  #       widget: string
+  #     - label: Title
+  #       name: title
+  #       widget: string
+  #     - label: Email
+  #       name: email
+  #       widget: string
+  #       required: false
+  #     - label: Twitter
+  #       name: twitter
+  #       widget: string
+  #       required: false
+  #     - label: Content
+  #       name: content
+  #       widget: markdown
+  #     - label: Order
+  #       name: weight
+  #       hint: "Order to put on staff page"
+  #       widget: number
+  #       valueType: int
+  #       required: true
+  #     - label: Active
+  #       name: active
+  #       hint: "Is this author still working for Spotlight PA?"
+  #       widget: boolean
+  #       required: true
+  # - label: Other
+  #   name: data
+  #   editor:
+  #     preview: false
+  #   files:
+  #     - label: "Sitewide settings"
+  #       name: sitewide
+  #       file: config/_default/params.toml
+  #       format: toml-frontmatter
+  #       fields:
+  #         - label: Banner
+  #           name: banner
+  #           hint: "Sitewide alert banner"
+  #           widget: markdown
+  #           required: false
+  #         - label: "Banner link"
+  #           name: banner-link
+  #           hint: "Sitewide alert banner clickthrough link"
+  #           widget: string
+  #           required: false
+  #         - label: "Show banner"
+  #           name: banner-active
+  #           hint: "Show sitewide alert banner"
+  #           widget: boolean
+  #           default: false
+  #     - label: "News landing page"
+  #       name: news-landing
+  #       file: content/news/_index.md
+  #       format: toml-frontmatter
+  #       fields:
+  #         - label: Title
+  #           name: title
+  #           widget: string
+  #         - label: Description
+  #           name: description
+  #           widget: string
+  #         - label: Body
+  #           name: body
+  #           widget: markdown
+  #     - label: "Press release landing page"
+  #       name: press-release
+  #       file: content/press-releases/_index.md
+  #       format: toml-frontmatter
+  #       fields:
+  #         - label: Title
+  #           name: title
+  #           widget: string
+  #         - label: Description
+  #           name: description
+  #           widget: string
+  #         - label: Body
+  #           name: body
+  #           widget: markdown
+  #     - label: Profiles
+  #       name: profiles
+  #       file: data/profiles.toml
+  #       fields:
+  #         - label: "Team members"
+  #           label_singular: Member
+  #           name: profiles
+  #           widget: list
+  #           fields:
+  #             - label: Name
+  #               name: name
+  #               widget: string
+  #             - label: Title
+  #               name: title
+  #               widget: string
+  #             - label: Email
+  #               name: email
+  #               widget: string
+  #               required: false
+  #             - label: Twitter
+  #               name: twitter
+  #               widget: string
+  #               required: false
+  #             - label: Content
+  #               name: content
+  #               widget: markdown
+  #     - label: Menus
+  #       name: menus
+  #       file: config/_default/menus.toml
+  #       fields:
+  #         - label: "Main menu items"
+  #           label_singular: "menu item"
+  #           name: main
+  #           hint: "Navbar main menu"
+  #           widget: list
+  #           fields: &menu
+  #             - label: "Display Name"
+  #               name: name
+  #               widget: string
+  #               required: true
+  #             - label: URL
+  #               name: url
+  #               widget: string
+  #               required: true
+  #             - label: "CSS class"
+  #               name: pre
+  #               widget: string
+  #               required: false
+  #             - label: Order
+  #               name: weight
+  #               widget: number
+  #               valueType: int
+  #               required: false
+  #         - label: "Footer menu items"
+  #           label_singular: "menu item"
+  #           name: footer
+  #           hint: "Footer pages list, first column"
+  #           widget: list
+  #           fields: *menu
+  #         - label: "Footer about menu items"
+  #           label_singular: "menu item"
+  #           name: about
+  #           hint: "Footer pages list, about column"
+  #           widget: list
+  #           fields: *menu
+  #         - label: "Social menu items"
+  #           label_singular: "menu item"
+  #           name: social
+  #           hint: "Footer social links"
+  #           widget: list
+  #           fields: *menu

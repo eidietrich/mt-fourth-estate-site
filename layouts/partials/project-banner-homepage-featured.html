@@ -1,27 +1,40 @@
-{{ $logo := resources.Get (.Get "logo") }}
+{{ $logo := resources.Get (.Get "logoslug") }}
 {{ $logotype := .Get "logotype" }}
-{{ $name := .Get "name" }}
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $content := .Get "content"}}
 {{ $url := .Get "url" }}
-<div class="column">
-    <p class="title is-3">{{ $name }}</p>
-    <p class="subtitle is-4">TK project tagline/description here</p>
-  <a
-    href="{{ $url }}"
-    title="{{ $name }}"
-  >
-  <!-- TODO:Refactor out styles -->
-    <div style="max-width: 800px">
-      {{ if eq $logotype "svg" }}
-        <div class="is-sr-only">Logo for {{ $name }}</div>
-        {{ $logo.Content| safeHTML }}
-      {{ else }}
-        {{ $logo = $logo.Resize "x800" | fingerprint }}
-        <img
-          src="{{ $logo.RelPermalink }}"
-          alt="Logo for {{ $name }}"
-          style="height: 400px;"
-        >
-      {{ end }}
-    </div>
-  </a>
+
+<div class="columns">
+  <div class="column is-two-thirds">
+    <a
+      href="{{ $url }}"
+      title="{{ $title }}"
+    >
+      <!-- TODO:Refactor out styles -->
+      <div>
+        {{ if eq $logotype "svg" }}
+          <div class="is-sr-only">Logo for {{ $title }}</div>
+          {{ $logo.Content| safeHTML }}
+        {{ else }}
+          {{ $logo = $logo.Resize "x800" | fingerprint }}
+          <img
+            src="{{ $logo.RelPermalink }}"
+            alt="{{ $title }} logo"
+          >
+        {{ end }}
+      </div>
+    </a>
+  </div>
+  
+  <div class="column is-one-third">
+    <a
+      href="{{ $url }}"
+      title="{{ $title }}"
+    >
+      <h3 class="title is-3">{{ $title }}</h3>
+    </a>
+    <h4 class="subtitle is-4">{{ $subtitle }}</h4>
+    <p>{{ $content }}</p>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-{{ $bgImg := resources.Get "/img/bgs/capitol-moody.jpeg" }}
+{{ $bgImg := resources.Get "/img/bgs/old-cabin-darkened-3.png" }}
 {{ $bgImg = $bgImg.Resize "1200x" | fingerprint }}
 <style>
 #about-hero {
@@ -20,7 +20,7 @@
       <h2 class="subtitle has-text-weight-light is-size-2 is-size-3-mobile block">
         {{ .Param "subtitle" }}
       </h2>
-      <div class="notification has-background-black-ter">
+      <!-- <div class="notification has-background-black-ter">
         <form
           action="https://spotlightpa.us3.list-manage.com/subscribe/post?u=4f6d92afd9b3de3ddb48714b9&amp;id=0466df5ab5"
           method="post"
@@ -97,7 +97,7 @@
             </div>
           </div>
         </form>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>

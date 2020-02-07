@@ -1,5 +1,5 @@
 +++
-title = "Graying Pains demo story 2"
+title = "News outlet plans to publish Graying Pains story"
 subtitle = "Subtitle - this is optional"
 kicker = "Top term"
 

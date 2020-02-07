@@ -7,9 +7,15 @@ $inky-red: #da291c;
 $papost-green: #78bc20;
 $pg-yellow: #ffcb05;
 
-$turquoise: $spotlight-darkblue;
-$blue: $spotlight-darkblue;
-$cyan: $spotlight-lightblue;
+$dark-gray-blue: #0f2e4a;
+$light-gray-blue: #505d75;
+$salmon-highlight: #ee8254;
+
+$primary: $light-gray-blue;
+
+// $turquoise: $spotlight-darkblue;
+// $blue: $spotlight-darkblue;
+// $cyan: $spotlight-lightblue;
 $cyan-invert: #2a7ab0;
 $green: $papost-green;
 $red: $inky-red;
@@ -21,17 +27,17 @@ $black: #000;
 $black-ter: hsla(0, 0%, 14%, 0.8);
 $danger: $orange;
 
-$link-hover: $spotlight-lightblue;
+$link-hover: $salmon-highlight;
 $footer-background-color: hsl(0, 0%, 7%);
 $footer-color: hsl(0, 0%, 96%);
 
 $navbar-height: 5rem;
 $navbar-item-img-max-height: 3rem;
-$navbar-background-color: $black;
+$navbar-background-color: $light-gray-blue;
 $navbar-item-color: $white;
-$navbar-item-hover-background-color: $black;
+$navbar-item-hover-background-color: $dark-gray-blue;
 $navbar-tab-active-background-color: $black;
-$navbar-item-active-color: $white;
+$navbar-item-active-color: $salmon-highlight;
 $navbar-breakpoint: 1023px;
 $navbar-box-shadow-color: #f00;
 
@@ -148,11 +154,11 @@ body {
   width: 300px;
 
   &:hover {
-    color: $spotlight-darkblue;
+    color: $salmon-highlight;
   }
 
   &:active {
-    color: $spotlight-lightblue;
+    color: $salmon-highlight;
   }
 
   @media (max-width: 350px) {
@@ -224,7 +230,7 @@ body {
 }
 
 a.navbar-burger:hover {
-  color: $yellow;
+  color: $salmon-highlight;
 }
 
 @media screen and (max-width: $navbar-breakpoint - 1px) {
@@ -234,6 +240,8 @@ a.navbar-burger:hover {
 }
 
 .section {
+  max-width: 1400px;
+  margin: auto;
   &.is-top {
     padding-bottom: 0;
   }
@@ -421,4 +429,10 @@ $margin-sizes: (
 .is-vertical > .tile {
   /* autoprefixer: off */
   -ms-flex-preferred-size: auto; /* IE 11 fix */
+}
+
+// Added for Fourth Estate site
+a>.title:hover {
+  // color: $salmon-highlight;
+  text-decoration: underline;
 }
