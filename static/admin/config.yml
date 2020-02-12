@@ -1,24 +1,16 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
 media_folder: assets/img/uploads
 public_folder: /img/uploads
 
-# site_url: https://www.spotlightpa.org
-# display_url: https://www.spotlightpa.org
-# logo_url: https://www.spotlightpa.org/img/logos/banner-share-5000.png
+site_url: https://montanafourthestate.org
+display_url: https://montanafourthestate.org
 
 show_preview_links: true
 
-backend:
-  name: github
-  repo: eidietrich/mt-fourth-estate-site
-  branch: master
-
 yaml-definitions: &page-fields
-  # - label: Draft
-  #   name: draft
-  #   widget: boolean
-  #   hint: "Content will not show up on site, but will be publically available on Github. Do not save embargoed material."
-  #   default: true
-  #   required: false
   - label: Hed
     name: title
     hint: "Title as it appears at top of page"
@@ -195,38 +187,6 @@ collections:
     format: toml-frontmatter
     extension: md
     create: true
-  - label: Project 3
-    name: project-3
-    folder: content/project-3
-    fields: *page-fields
-    format: toml-frontmatter
-    extension: md
-    create: true
-
-  - label: Articles
-    label_singular: Article
-    name: news
-    folder: content/news
-    slug: "{{month}}-{{day}}-{{slug}}"
-    format: toml-frontmatter
-    extension: md
-    create: true
-    preview_path: "/news/{{year}}/{{slug}}/"
-    editor:
-      preview: false
-    fields: *page-fields
-  - label: Root pages
-    name: content
-    folder: content
-    filter: { field: "section", value: "root" }
-    format: toml-frontmatter
-    extension: md
-    create: true
-    slug: "{{url}}"
-    preview_path: "/{{slug}}/"
-    editor:
-      preview: false
-    fields: *page-fields
 
   - label: About pages
     name: about
