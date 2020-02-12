@@ -1,4 +1,5 @@
 +++
+type = "story"
 title = "This is Graying Pains #5"
 description = "This is gp5 summary"
 published = 2020-02-12T22:58:20.986Z

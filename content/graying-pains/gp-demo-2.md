@@ -1,4 +1,5 @@
 +++
+type = "story"
 title = "Graying Pains multimedia test piece"
 subtitle = "Subtitle - this is optional"
 

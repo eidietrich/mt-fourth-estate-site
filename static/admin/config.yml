@@ -10,7 +10,10 @@ display_url: https://montanafourthestate.org
 
 show_preview_links: true
 
-yaml-definitions: &page-fields
+yaml-definitions: &post-fields
+  - name: type
+    widget: "select"
+    options: ["story"]
   - label: Hed
     name: title
     hint: "Title as it appears at top of page"
@@ -24,12 +27,14 @@ yaml-definitions: &page-fields
     name: description
     hint: "Shown in social share previews, search results + on project page"
     widget: string
-    required: false
   - label: Date
     name: published
     widget: datetime
     hint: "Note that future dated articles will not be published on the live site"
-    required: false
+  - label: Pinned
+    name: pinned
+    widget: boolean
+    hint: Stories pinned next to featured story
   - label: "Featured Image"
     name: "image"
     widget: string
@@ -53,235 +58,20 @@ yaml-definitions: &page-fields
   - label: Byline
     name: byline
     widget: string
-  - label: Publication
-    name: publication
-    widget: string
-    required: false
+    hint: "e.g. Jane Doe / Montana Free Press"
   - label: Body
     name: body
     widget: markdown
 
-#     # THIS ISN'T WORKING
-# yaml-definitions-2: &static-page-fields
-#   - label: "URL path (e.g., /about)"
-#     name: url
-#     widget: string
-#   - label: Hed
-#     name: title
-#     hint: "Title as it appears at top of page"
-#     widget: string
-#   - label: Body
-#     name: body
-#     widget: markdown
-#   - label: type
-#     name: type
-#     widget: hidden
-#     required: false
-#   - label: section
-#     name: section
-#     widget: hidden
-#     required: false
-
 collections:
-  - label: Graying Pains
+  - label: Graying Pains stories
+    label_singular: Graying Pains story
+    description: Stories in Graying Pains project
     name: graying-pains
     folder: content/graying-pains
-    fields: *page-fields
-    slug: "{{slug}}"
+    filter: { field: "type", value: "story" }
+    fields: *post-fields
+    slug: "gp-{{slug}}"
     format: toml-frontmatter
     extension: md
     create: true
-  - label: Project 2
-    name: project-2
-    folder: content/project-2
-    fields: *page-fields
-    format: toml-frontmatter
-    extension: md
-    create: true
-
-  - label: About page
-    name: about
-    folder: content/about
-    format: toml-frontmatter
-    extension: md
-    create: true
-    slug: "{{url}}"
-    preview_path: "/about/{{slug}}/"
-    editor:
-      preview: false
-    fields: *page-fields
-  # - label: "Press Releases"
-  #   label_singular: "Press Release"
-  #   name: press-releases
-  #   folder: content/press-releases
-  #   format: toml-frontmatter
-  #   extension: md
-  #   create: true
-  #   preview_path: "/press-releases/{{slug}}/"
-  #   editor:
-  #     preview: false
-  #   fields: *page-fields
-  # - label: Authors
-  #   label_singular: Author
-  #   name: authors
-  #   folder: data/authors
-  #   format: toml
-  #   extension: toml
-  #   create: true
-  #   preview_path: /about/staff/
-  #   identity_field: name
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - label: Name
-  #       name: name
-  #       widget: string
-  #     - label: Title
-  #       name: title
-  #       widget: string
-  #     - label: Email
-  #       name: email
-  #       widget: string
-  #       required: false
-  #     - label: Twitter
-  #       name: twitter
-  #       widget: string
-  #       required: false
-  #     - label: Content
-  #       name: content
-  #       widget: markdown
-  #     - label: Order
-  #       name: weight
-  #       hint: "Order to put on staff page"
-  #       widget: number
-  #       valueType: int
-  #       required: true
-  #     - label: Active
-  #       name: active
-  #       hint: "Is this author still working for Spotlight PA?"
-  #       widget: boolean
-  #       required: true
-  # - label: Other
-  #   name: data
-  #   editor:
-  #     preview: false
-  #   files:
-  #     - label: "Sitewide settings"
-  #       name: sitewide
-  #       file: config/_default/params.toml
-  #       format: toml-frontmatter
-  #       fields:
-  #         - label: Banner
-  #           name: banner
-  #           hint: "Sitewide alert banner"
-  #           widget: markdown
-  #           required: false
-  #         - label: "Banner link"
-  #           name: banner-link
-  #           hint: "Sitewide alert banner clickthrough link"
-  #           widget: string
-  #           required: false
-  #         - label: "Show banner"
-  #           name: banner-active
-  #           hint: "Show sitewide alert banner"
-  #           widget: boolean
-  #           default: false
-  #     - label: "News landing page"
-  #       name: news-landing
-  #       file: content/news/_index.md
-  #       format: toml-frontmatter
-  #       fields:
-  #         - label: Title
-  #           name: title
-  #           widget: string
-  #         - label: Description
-  #           name: description
-  #           widget: string
-  #         - label: Body
-  #           name: body
-  #           widget: markdown
-  #     - label: "Press release landing page"
-  #       name: press-release
-  #       file: content/press-releases/_index.md
-  #       format: toml-frontmatter
-  #       fields:
-  #         - label: Title
-  #           name: title
-  #           widget: string
-  #         - label: Description
-  #           name: description
-  #           widget: string
-  #         - label: Body
-  #           name: body
-  #           widget: markdown
-  #     - label: Profiles
-  #       name: profiles
-  #       file: data/profiles.toml
-  #       fields:
-  #         - label: "Team members"
-  #           label_singular: Member
-  #           name: profiles
-  #           widget: list
-  #           fields:
-  #             - label: Name
-  #               name: name
-  #               widget: string
-  #             - label: Title
-  #               name: title
-  #               widget: string
-  #             - label: Email
-  #               name: email
-  #               widget: string
-  #               required: false
-  #             - label: Twitter
-  #               name: twitter
-  #               widget: string
-  #               required: false
-  #             - label: Content
-  #               name: content
-  #               widget: markdown
-  #     - label: Menus
-  #       name: menus
-  #       file: config/_default/menus.toml
-  #       fields:
-  #         - label: "Main menu items"
-  #           label_singular: "menu item"
-  #           name: main
-  #           hint: "Navbar main menu"
-  #           widget: list
-  #           fields: &menu
-  #             - label: "Display Name"
-  #               name: name
-  #               widget: string
-  #               required: true
-  #             - label: URL
-  #               name: url
-  #               widget: string
-  #               required: true
-  #             - label: "CSS class"
-  #               name: pre
-  #               widget: string
-  #               required: false
-  #             - label: Order
-  #               name: weight
-  #               widget: number
-  #               valueType: int
-  #               required: false
-  #         - label: "Footer menu items"
-  #           label_singular: "menu item"
-  #           name: footer
-  #           hint: "Footer pages list, first column"
-  #           widget: list
-  #           fields: *menu
-  #         - label: "Footer about menu items"
-  #           label_singular: "menu item"
-  #           name: about
-  #           hint: "Footer pages list, about column"
-  #           widget: list
-  #           fields: *menu
-  #         - label: "Social menu items"
-  #           label_singular: "menu item"
-  #           name: social
-  #           hint: "Footer social links"
-  #           widget: list
-  #           fields: *menu
