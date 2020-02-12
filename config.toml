@@ -5,8 +5,8 @@ enableRobotsTXT = true
 enableGitInfo = true
 rssLimit = 50
 
-# TODO: Change this to MTFP code
-googleAnalytics = "UA-141126362-1"
+# DONE changed this to MTFP code
+googleAnalytics = "UA-70813941-4"
 
 [markup]
 defaultMarkdownHandler = "blackfriday"

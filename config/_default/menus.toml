@@ -16,35 +16,13 @@ pre = "is-uppercase"
 url = "/graying-pains/"
 weight = 3
 
-[[main]]
-name = "Project 2 TK"
-pre = "is-uppercase"
-url = "/project-2/"
-weight = 4
-
-[[main]]
-name = "Project 3 TK"
-pre = "is-uppercase"
-url = "/project-3/"
-weight = 5
-
 # [[main]]
-# name = "Supporters"
+# name = "Project 2 TK"
 # pre = "is-uppercase"
-# url = "/support/"
-# weight = 3
-
-# [[main]]
-# name = "FAQ"
-# pre = "is-uppercase"
-# url = "/about/faq/"
+# url = "/project-2/"
 # weight = 4
 
-# [[main]]
-# name = "Send a tip"
-# pre = "is-uppercase"
-# url = "/tips/"
-# weight = 5
+# Footer col 1
 
 [[footer]]
 name = "Home"
@@ -58,41 +36,7 @@ pre = "is-uppercase"
 url = "/about/"
 weight = 2
 
-[[footer]]
-name = "Contact"
-pre = "is-uppercase"
-url = "/contact/"
-weight = 3
-
-# [[footer]]
-# name = "Tips"
-# pre = "is-uppercase"
-# url = "/tips/"
-# weight = 4
-
-# [[footer]]
-# name = "Press releases"
-# pre = "is-uppercase"
-# url = "/press-releases/"
-# weight = 5
-
-# [[footer]]
-# name = "Newsletters"
-# pre = "is-uppercase"
-# url = "/newsletters/"
-# weight = 6
-
-# [[footer]]
-# name = "News Archive"
-# pre = "is-uppercase"
-# url = "/news/"
-# weight = 7
-
-# [[footer]]
-# name = "Donate"
-# pre = "is-uppercase"
-# url = "/donate/"
-# weight = 8
+# Footer col 2
 
 [[projects]]
 name = "Graying Pains"
@@ -100,53 +44,20 @@ pre = "is-uppercase"
 url = "/graying-pains/"
 weight = 1
 
-[[projects]]
-name = "Project 2 TK"
-pre = "is-uppercase"
-url = "/project-2/"
-weight = 2
-
-[[projects]]
-name = "Project 3 TK"
-pre = "is-uppercase"
-url = "/project-3/"
-weight = 3
-
-# [[about]]
-# name = "About Us"
+# [[projects]]
+# name = "Project 2 TK"
 # pre = "is-uppercase"
-# url = "/about/"
-# weight = 1
-
-# [[about]]
-# name = "Our Mission"
-# pre = "is-uppercase"
-# url = "/about/mission/"
+# url = "/project-2/"
 # weight = 2
 
-# [[about]]
-# name = "Staff"
+
+# Footer col 3 - turned off
+
+# [[social]]
+# name = "Get updates"
 # pre = "is-uppercase"
-# url = "/about/staff/"
-# weight = 3
-
-# [[about]]
-# name = "Diversity"
-# pre = "is-uppercase"
-# url = "/about/diversity/"
-# weight = 4
-
-# [[about]]
-# name = "FAQ"
-# pre = ""
-# url = "/about/faq/"
-# weight = 5
-
-[[social]]
-name = "Get updates"
-pre = "is-uppercase"
-url = "TK"
-weight = 1
+# url = "TK"
+# weight = 1
 
 # [[social]]
 # name = "Facebook"

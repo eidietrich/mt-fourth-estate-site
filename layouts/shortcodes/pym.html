@@ -1,0 +1,11 @@
+</div>
+    <div class="box">
+        {{ $src := .Get "src" }}
+        {{ $id := .Get "id" }}
+        {{ $config := dict "src" $src "id" $id}}
+
+        {{ $description := .Inner }}
+        {{ partial "pym-block.html" $config }}
+        <p class="is-size-6 is-italic">{{ $description }}</p>
+    </div>
+<div class="content">

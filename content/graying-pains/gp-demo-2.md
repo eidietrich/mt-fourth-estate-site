@@ -1,5 +1,5 @@
 +++
-title = "News outlet plans to publish Graying Pains story"
+title = "Graying Pains multimedia test piece"
 subtitle = "Subtitle - this is optional"
 kicker = "Top term"
 
@@ -17,9 +17,13 @@ byline = "John Doe"
 publication = "Montana Free Press"
 +++
 
-This here is Graying Pains intro piece.
+This here is a Graying Pains multimedia piece.
+
+{{<audio src="this-is-a-podcast.mp3">}}This is a caption{{</audio>}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis aliquam faucibus purus in massa. Leo duis ut diam quam nulla porttitor massa id.
+
+{{<pym src="https://apps.montanafreepress.org/graphics/201802-death-penalty-bill-history/" id="0">}}This is a caption{{</pym>}}
 
 Ac odio tempor orci dapibus ultrices. Adipiscing tristique risus nec feugiat in fermentum posuere. Ut morbi tincidunt augue interdum velit euismod in pellentesque massa. Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Imperdiet sed euismod nisi porta lorem mollis. Quis hendrerit dolor magna eget. Gravida neque convallis a cras semper auctor neque vitae tempus. Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
 

@@ -11,7 +11,7 @@ logoslug = "project-2"
 logotype = "svg"
 url = "/project-2/"
 
-ispublished = true
+ispublished = false
 order = 1
 +++
 TK information about project 2

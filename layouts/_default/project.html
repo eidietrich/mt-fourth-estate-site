@@ -19,16 +19,17 @@
   {{ $stories := .Paginator.Pages }}
   {{ $featured := first 1 $stories }}
   {{ $pinned := where ($stories | complement $featured)  "Params.pinned" true }}
+  {{ $projectColor := .Params.color | default "#bbb" }}
 
   <section class="section">
     <article class="columns is-centered is-multiline">
-      <div class="column is-half" style="border: 3px solid #d6b87f;">
+      <div class="column is-half" style="border: 3px solid {{ $projectColor }}">
         {{ range $page := $featured }}
           {{ partial "featured-story-tile.html" $page }}
         {{ end }}
       </div>
       {{ with $pinned }}
-        <div class="column is-one-quarter is-ancestor" style="background: #d6b87f;">  
+        <div class="column is-one-quarter is-ancestor" style="background:{{ $projectColor }}">  
           <div class="tile is-parent is-vertical">
             {{ range $page := . }}
               {{ partial "pinned-story-tile.html" $page }}

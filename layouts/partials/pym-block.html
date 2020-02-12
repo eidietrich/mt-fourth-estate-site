@@ -1,0 +1,23 @@
+{{ $src := .src }}
+{{ $id := .id }}
+
+<!-- This will fail on stories with multiple Pym embeds -->
+<figure>
+    <div id="pym-embed" data-src="{{ $src }}" class="pym-holder"></div>
+</figure>
+
+<script>
+    var container = document.getElementById('pym-embed')
+    var src = container.getAttribute('data-src')
+    var pymParent = new pym.Parent('pym-embed', src, {
+        id: 'pym-iframe'
+    });
+    var iframe = pymParent.iframe
+    setInterval(function(){
+        // Hacky way to make sure iframe height stays in sync
+        // addresses this issue https://stackoverflow.com/questions/57918429/bulma-css-framework-adds-iframe-height-auto-and-embedded-youtube-videos-get-le 
+        iframe.style.height = iframe.getAttribute('height')
+    }, 200);
+</script>
+
+<!-- Pym.js made available at site level via partials/main.html -->

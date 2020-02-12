@@ -4,7 +4,6 @@ subtitle = "Subtitle - this is optional"
 kicker = "Project Introduction"
 
 description = "Description TK"
-dek = "Dek TK"
 
 published = 2019-12-26T11:07:00Z
 pinned = true

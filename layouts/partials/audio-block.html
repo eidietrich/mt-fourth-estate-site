@@ -1,0 +1,7 @@
+{{ $audio := resources.Get . }}
+<figure>
+    <audio
+        controls
+        src="{{ $audio.RelPermalink }}">
+    </audio>
+</figure>

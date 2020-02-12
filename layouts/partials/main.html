@@ -5,12 +5,21 @@
 <section class="section">
   <article class="columns is-centered is-multiline">
     <div class="column is-three-fifths">
+      {{ $projectName := .Page.Section }}
+      {{ $projects := where .Site.Sections "Params.type" "project" }}
+      {{ $project := index (where $projects "Params.url" (printf "/%s/" $projectName)) 0}}
+
       {{ if $params.showTitle }}
         <header class="block">
-          {{ if $params.kicker }}
+          {{ if $projectName }}
+          <a href="{{ $project.Permalink }}">
             <p
               class="tag is-square is-black is-uppercase has-text-weight-semibold has-margin-bottom-thin"
-            >{{ $params.kicker }}</p>
+              style="background-color: {{ $project.Params.color }};"
+            >
+              {{ replace $projectName "-" " "}}
+            </p>
+          </a>
           {{ else }}
             <div class="is-clearfix">
               <div class="is-pulled-right" data-ga-action="Header breadcrumbs">
@@ -137,7 +146,7 @@
     </div>
   </article>
 
-  {{ $news := .Site.GetPage "/news/_index.md" }}
+  <!-- {{ $news := .Site.GetPage "/news/_index.md" }} -->
   <!-- {{ $related := $news.RegularPages.Related . | first 3 }} -->
   {{ $related := .Site.RegularPages.Related . | first 3 }}
   {{ with $related }}
@@ -152,9 +161,11 @@
               <hr class="is-emphatic-underline has-margin-top-negative">
             </div>
           </div>
-          {{ range $page := $related }}
-          {{ partial "tile-archive.html" $page }} 
-          {{ end }}
+          <div class="tile is-parent is-vertical">
+            {{ range $page := $related }}
+              {{ partial "tile-archive.html" $page }} 
+            {{ end }}
+          </div>
         </div>
       </div>
     </nav>
