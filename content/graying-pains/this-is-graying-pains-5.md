@@ -5,8 +5,7 @@ description = "This is gp5 summary"
 published = 2020-02-12T22:58:20.986Z
 image-description = "Image description"
 image-credit = "Image credit"
-byline = "Jane Doe"
-publication = "Montana Free Press"
+byline = "Jane Doe / Montana Free Press"
 +++
 ![](/img/uploads/grass.jpeg)
 

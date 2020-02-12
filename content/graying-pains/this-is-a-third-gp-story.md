@@ -13,8 +13,7 @@ image-credit = "Image credit"
 image-description = "Image description TK"
 image-size = "inline"
 
-byline = "John Doe"
-publication = "Montana Free Press"
+byline = "John Doe / Montana Free Press"
 +++
 Ac odio tempor orci dapibus ultrices. Adipiscing tristique risus nec feugiat in fermentum posuere. Ut morbi tincidunt augue interdum velit euismod in pellentesque massa. Porttitor massa id neque aliquam vestibulum morbi blandit cursus. Imperdiet sed euismod nisi porta lorem mollis. Quis hendrerit dolor magna eget. Gravida neque convallis a cras semper auctor neque vitae tempus. Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
 

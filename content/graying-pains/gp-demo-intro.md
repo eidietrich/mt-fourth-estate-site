@@ -13,8 +13,7 @@ image-credit = "Image credit"
 image-description = "Image description TK"
 image-size = "inline"
 
-byline = "John Doe"
-publication = "Montana Free Press"
+byline = "John Doe / Montana Free Press"
 
 +++
 

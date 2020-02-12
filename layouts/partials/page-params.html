@@ -6,10 +6,6 @@
 {{ with .Param "byline" }}
    {{ $byline = . }}
 {{ end }}
-{{ with .Param "publication" }}
-  <!-- join byline, publication -->
-  {{ $byline = delimit (slice $byline .) " / " }}
-{{ end }}
 
 {{ $kicker := .Param "kicker" }}
 
