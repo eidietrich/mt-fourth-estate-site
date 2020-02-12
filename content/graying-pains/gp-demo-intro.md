@@ -1,7 +1,6 @@
 +++
 title = "Graying Pains intro"
 subtitle = "Subtitle - this is optional"
-kicker = "Project Introduction"
 
 description = "Description TK"
 

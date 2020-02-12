@@ -1,7 +1,6 @@
 +++
 title = "Graying Pains demo story 4"
 subtitle = "Subtitle - this is optional"
-kicker = "Top term"
 
 description = "Description TK"
 dek = "Dek TK"

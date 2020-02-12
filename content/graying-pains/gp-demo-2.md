@@ -1,7 +1,6 @@
 +++
 title = "Graying Pains multimedia test piece"
 subtitle = "Subtitle - this is optional"
-kicker = "Top term"
 
 description = "Description TK"
 dek = "Dek TK"

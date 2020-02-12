@@ -1,7 +1,6 @@
 +++
 title = "This is another Graying Pains story. It will also be published"
 subtitle = "Subtitle - this is optional"
-kicker = "Top term"
 
 description = "Description TK"
 dek = "Dek TK"

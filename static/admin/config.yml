@@ -20,19 +20,9 @@ yaml-definitions: &page-fields
     widget: string
     hint: "Appears below hed at top of page; AKA dek"
     required: false
-  - label: Kicker
-    name: kicker
-    hint: "Small text appearing above the page headline, e.g. Health"
-    widget: string
-    required: false
   - label: Summary
     name: description
-    hint: "Shown in social share previews and search results"
-    widget: string
-    required: false
-  - label: Blurb
-    name: dek
-    hint: "Summary to appear in article rivers (home/landing page)"
+    hint: "Shown in social share previews, search results + on project page"
     widget: string
     required: false
   - label: Date
@@ -60,16 +50,6 @@ yaml-definitions: &page-fields
     widget: "select"
     options: ["full", "inline", "hidden"]
     required: false
-
-  # - label: Authors
-  #   label_singular: author
-  #   name: authors
-  #   widget: list
-  #   default: []
-  #   field:
-  #     label: Name
-  #     hint: "Full name as listed in data profile"
-  #     widget: string
   - label: Byline
     name: byline
     widget: string
@@ -81,95 +61,26 @@ yaml-definitions: &page-fields
     name: body
     widget: markdown
 
-  - label: "Override title tag"
-    name: title-tag
-    widget: string
-    hint: "Set title tag separately from page hed"
-    required: false
-  - label: Link to as
-    name: linktitle
-    hint: "When linking to this page from another page, use this as the link title instead of hed"
-    widget: string
-    required: false
-  - label: Special Report
-    name: special-report
-    widget: boolean
-    hint: "Add 'special report' label on homepage"
-    default: false
-    required: false
-  - label: Suppress in featured slot
-    name: suppress-featured
-    widget: boolean
-    hint: "Don't make this the top story on the homepage"
-    default: false
-    required: false
-  - label: "Suppress title"
-    name: suppress-title
-    widget: boolean
-    hint: "Don't show title in content area"
-    required: false
-  - label: "Hide newsletters pop-up"
-    name: modal-exclude
-    widget: boolean
-    hint: "Don't show newsletters modal screen on this page"
-    required: false
-  - label: "No index"
-    name: no-index
-    hint: "Hide page on Google etc."
-    widget: boolean
-    required: false
-  - label: Slug
-    name: slug
-    widget: string
-    required: false
-  - label: Footer text
-    name: extra-footer
-    hint: "Extra text to place after copyright message of page"
-    widget: string
-    required: false
-  - label: "Override URL"
-    name: url
-    widget: string
-    required: false
-  - label: Aliases
-    label_singular: alias
-    name: aliases
-    widget: list
-    default: []
-    field:
-      label: Path
-      name: path
-      widget: string
-
-  - label: type
-    name: type
-    widget: hidden
-    required: false
-  - label: section
-    name: section
-    widget: hidden
-    required: false
-
-    # THIS ISN'T WORKING
-yaml-definitions-2: &static-page-fields
-  - label: "URL path (e.g., /about)"
-    name: url
-    widget: string
-  - label: Hed
-    name: title
-    hint: "Title as it appears at top of page"
-    widget: string
-  - label: Body
-    name: body
-    widget: markdown
-  - label: type
-    name: type
-    widget: hidden
-    required: false
-  - label: section
-    name: section
-    widget: hidden
-    required: false
+#     # THIS ISN'T WORKING
+# yaml-definitions-2: &static-page-fields
+#   - label: "URL path (e.g., /about)"
+#     name: url
+#     widget: string
+#   - label: Hed
+#     name: title
+#     hint: "Title as it appears at top of page"
+#     widget: string
+#   - label: Body
+#     name: body
+#     widget: markdown
+#   - label: type
+#     name: type
+#     widget: hidden
+#     required: false
+#   - label: section
+#     name: section
+#     widget: hidden
+#     required: false
 
 collections:
   - label: Graying Pains
@@ -188,7 +99,7 @@ collections:
     extension: md
     create: true
 
-  - label: About pages
+  - label: About page
     name: about
     folder: content/about
     format: toml-frontmatter
