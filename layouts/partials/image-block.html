@@ -10,8 +10,8 @@
     {{ $height := mul $size 160 }}
     {{ $height = div (mul $heightR $height) $widthR }}
 
-    {{ $imgOpt := dict "filename" $imagename "width" $width "height" $height }}
-    {{ $url := partial "imgproxy.html" $imgOpt }}
+    {{ $resource := ((resources.Get $imagename).Resize (printf "%dx" $width)) | fingerprint }}
+    {{ $url := $resource.RelPermalink }}
     {{ $src := printf "%s %dw" $url $width }}
     {{ $imgs = $imgs | append $src }}
     {{ if eq $size 2 }}
@@ -20,8 +20,6 @@
   {{ end }}
   {{ $srcset := delimit $imgs ", " }}
   {{ $credit := .credit }}
-
-  {{ $img := resources.Get $imagename | fingerprint }}
 
   <figure class="{{ .figClass }}">
     {{- if .link -}}
@@ -36,7 +34,8 @@
         <img
           alt="{{ .description }}"
           title="{{ .description }}"
-          src="{{ $img.RelPermalink }}"
+          srcset="{{ $srcset }}"
+          src="{{ $imgSmallSrc }}"
           {{ if .sizeHint }}
             sizes="(min-width: 769px) {{ .sizeHint }}, 100vw"
           {{ end }}
