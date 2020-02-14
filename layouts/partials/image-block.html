@@ -20,7 +20,6 @@
   {{ end }}
   {{ $srcset := delimit $imgs ", " }}
   {{ $credit := .credit }}
-
   <figure class="{{ .figClass }}">
     {{- if .link -}}
       <a
@@ -32,8 +31,8 @@
     {{- end -}}
       <picture class="has-ratio">
         <source
-          type="image/webp"
-          srcset='{{ replace $srcset ".jpeg" ".webp" }}'
+          type="image/jpeg"
+          srcset='{{ replace $srcset ".jpeg" ".jpeg" }}'
           {{ if .sizeHint }}
             sizes="(min-width: 769px) {{ .sizeHint }}, 100vw"
           {{ end }}

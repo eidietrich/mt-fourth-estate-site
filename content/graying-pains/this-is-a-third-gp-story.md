@@ -8,7 +8,7 @@ dek = "Dek TK"
 
 published = 2019-12-27T11:07:00Z
 
-image = "2019/11/walking.jpg"
+image = "/img/uploads/flowers.png"
 image-credit = "Image credit"
 image-description = "Image description TK"
 image-size = "inline"

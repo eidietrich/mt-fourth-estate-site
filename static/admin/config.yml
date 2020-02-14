@@ -37,7 +37,7 @@ yaml-definitions: &post-fields
     hint: Stories pinned next to featured story
   - label: "Featured Image"
     name: "image"
-    widget: string
+    widget: image
     required: false
     media_library:
       config:

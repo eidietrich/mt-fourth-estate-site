@@ -8,7 +8,7 @@ description = "Description TK"
 published = 2019-12-26T11:07:00Z
 pinned = true
 
-image = "2019/11/walking.jpg"
+image = "/img/uploads/mountains.jpeg"
 image-credit = "Image credit"
 image-description = "Image description TK"
 image-size = "inline"

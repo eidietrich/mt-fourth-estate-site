@@ -1,3 +1,5 @@
+{{ $slug := .Get "logoslug"}}
+
 {{ $logo := resources.Get (.Get "logoslug") }}
 {{ $logotype := .Get "logotype" }}
 {{ $title := .Get "title" }}
@@ -6,6 +8,8 @@
 {{ $url := .Get "url" }}
 
 <div class="columns">
+
+  {{ printf "%v" $slug }}
   <div class="column is-two-thirds">
     <a
       href="{{ $url }}"
