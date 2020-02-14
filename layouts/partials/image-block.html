@@ -36,7 +36,7 @@
         <img
           alt="{{ .description }}"
           title="{{ .description }}"
-          src="{{ $img.Permalink }}"
+          src="{{ $img.RelPermalink }}"
           {{ if .sizeHint }}
             sizes="(min-width: 769px) {{ .sizeHint }}, 100vw"
           {{ end }}

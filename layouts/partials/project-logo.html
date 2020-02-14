@@ -2,7 +2,7 @@
 {{ $logotype := .Get "logotype" | default "png"}}
 {{ $name := .Get "name" | default "Project logo"}}
 {{ $url := .Get "url" }}
-<div style="max-width: 400px">s
+<div style="max-width: 400px">
     {{ if eq $logotype "svg" }}
         <div class="is-sr-only">Logo for {{ $name }}</div>
     {{ $logo.Content| safeHTML }}
