@@ -2,17 +2,13 @@
 type = "story"
 title = "Graying Pains demo story 4"
 subtitle = "Subtitle - this is optional"
-
 description = "Description TK"
-dek = "Dek TK"
-
-published = 2019-12-27T11:07:00Z
-
-image = "2019/11/walking.jpg"
-image-credit = "Image credit"
+published = 2019-12-27T11:07:00.000Z
+pinned = false
+image = ""
 image-description = "Image description TK"
+image-credit = "Image credit"
 image-size = "inline"
-
 byline = "John Doe / Montana Free Press"
 +++
 This is body text. It comes with a few different things.
@@ -24,6 +20,8 @@ Euismod lacinia at quis risus sed vulputate odio ut. Est pellentesque elit ullam
 {{<pullquote>}}In pellentesque massa placerat duis ultricies lacus.{{</pullquote>}}
 
 Magnis dis parturient montes nascetur ridiculus. Nunc faucibus a pellentesque sit amet porttitor. Volutpat diam ut venenatis tellus. Fermentum leo vel orci porta non. Dui sapien eget mi proin sed libero. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Maecenas sed enim ut sem. Nulla facilisi morbi tempus iaculis urna id volutpat. Viverra justo nec ultrices dui sapien eget. Morbi enim nunc faucibus a. Morbi tristique senectus et netus et malesuada fames ac.
+
+![](/img/uploads/Screen Shot 2020-02-11 at 4.27.24 PM.png)
 
 Egestas congue quisque egestas diam in. Eu consequat ac felis donec et odio pellentesque diam. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra. Nunc id cursus metus aliquam eleifend mi in. Facilisi cras fermentum odio eu feugiat. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Quisque egestas diam in arcu cursus euismod quis viverra nibh. Velit dignissim sodales ut eu sem integer vitae justo eget. Magna fermentum iaculis eu non. Purus gravida quis blandit turpis cursus in. Sit amet cursus sit amet dictum sit amet. Elit sed vulputate mi sit. Et malesuada fames ac turpis egestas integer. Lacus vel facilisis volutpat est. Maecenas accumsan lacus vel facilisis volutpat est velit egestas dui. Pellentesque habitant morbi tristique senectus et netus et. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Faucibus a pellentesque sit amet porttitor.
 
