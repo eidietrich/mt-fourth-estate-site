@@ -18,5 +18,9 @@
 {{/*  {{ return "/img/uploads/flowers.png" }}  */}}
 {{/*  {{ return .filename }}  */}}
 
+{{/*  {{ $image := resources.Get (.filename) }}  */}}
+{{/*  {{ $image = $image.Resize "x400" | fingerprint }}  */}}
+
+{{/*  {{ return $image }}  */}}
 
 {{ return .filename }}
