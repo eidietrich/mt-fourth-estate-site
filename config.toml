@@ -5,6 +5,8 @@ enableRobotsTXT = true
 enableGitInfo = true
 rssLimit = 50
 
+timeout = "240s"
+
 # DONE changed this to MTFP code
 googleAnalytics = "UA-70813941-4"
 
