@@ -16,7 +16,7 @@ Felis eget nunc lobortis mattis aliquam faucibus. Venenatis urna cursus eget nun
 
 **Graphic embed**
 
-{{[pymsrc="https://apps.montanafreepress.org/graphics/201802-death-penalty-bill-history/"id="0"](pymsrc="https://apps.montanafreepress.org/graphics/201802-death-penalty-bill-history/"id="0")}}This is a caption{{</pym>}}
+{{<pym src="https://apps.montanafreepress.org/graphics/201802-death-penalty-bill-history/" id="0">}}This is a caption{{</pym>}}
 
 Enim eu turpis egestas pretium aenean pharetra magna ac. Ultricies integer quis auctor elit sed. Velit euismod in pellentesque massa placerat duis. Lorem ipsum dolor sit amet consectetur adipiscing. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Diam in arcu cursus euismod quis viverra. Enim eu turpis egestas pretium. Rutrum quisque non tellus orci ac auctor augue mauris. Varius quam quisque id diam vel quam elementum. Congue eu consequat ac felis donec et odio. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem.
 
