@@ -52,5 +52,3 @@ Switch from "Rich Text" to "Markdown" view
 
 ## TODO
 - Full deploy to URL + HTTPS wrangling
-- Figure out how to make audio uploadable
-- Figure out how to configure image types

@@ -1,8 +1,5 @@
 import { each, on } from "./dom-utils.js";
-import { addModal } from "./modal.js";
-import { addSocialButtonListeners } from "./social.js";
 import { addGAListeners } from "./google-analytics.js";
-import { rotatePromoImages } from "./promo.js";
 
 function createListeners() {
   on("click", "[data-target]", ev => {
@@ -16,9 +13,6 @@ function createListeners() {
   });
 
   addGAListeners();
-  addSocialButtonListeners();
-  addModal();
-  rotatePromoImages();
 }
 
 on("DOMContentLoaded", document, createListeners);
