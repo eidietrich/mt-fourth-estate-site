@@ -24,7 +24,7 @@ Felis eget nunc lobortis mattis aliquam. Eget magna fermentum iaculis eu non dia
 
 **Audio embed**
 
-{{<audiosrc="this-is-a-podcast.mp3">}}This is a caption{{</audio>}}
+{{<audio src="this-is-a-podcast.mp3">}}This is a caption{{</audio>}}
 
 Eu augue ut lectus arcu bibendum at varius vel. Congue eu consequat ac felis donec et odio. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Ut ornare lectus sit amet est. Et malesuada fames ac turpis egestas integer eget aliquet nibh. Nam aliquam sem et tortor consequat id porta nibh. Facilisis magna etiam tempor orci eu lobortis. Parturient montes nascetur ridiculus mus mauris vitae. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.
 
