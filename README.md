@@ -1,10 +1,10 @@
-# Poor Richard [![Netlify Status](https://api.netlify.com/api/v1/badges/0bc95633-f6ac-4e3b-993f-2ec13af97eba/deploy-status)](https://app.netlify.com/sites/poor-richard-spotlightpa/deploys)
+# MT Fourth Estate site
 
-**Fork** - Assessing how easy it will be to adapt this for a [Montana Free Press](https://montanafreepress.org/) project.
+Adapted from Spotlight PA's [Poor Richard](https://github.com/spotlightpa/poor-richard) site. 
 
-A static site for [Spotlight PA](https://www.spotlightpa.org) hosted by [Netlify](https://www.netlify.com/).
+A static site for the [Montana Free Press](https://montanafreepress.org)-coordinated [Montana Fourth Estate collaboration](https://montanafourthestate.org), hosted by [Netlify](https://www.netlify.com/).
 
-All content copyright Spotlight PA. Code available under the MIT license. Photos used with permission as indicated.
+All content copyright Montana Fourth Estate. Code available under the MIT license.
 
 ## Usage
 - Install [Hugo](https://gohugo.io/) and Yarn
@@ -15,21 +15,42 @@ All content copyright Spotlight PA. Code available under the MIT license. Photos
 - Run `yarn test` to test code
 - Run `yarn build:prod` to create a production build
 
-## Things to figure out
-* Image management
-* How to hook up CMS
+## Documentation
 
-## TODOS
-* Add option for filtering partners by project (e.g. participated-in array field in data section, or participants field in project data)
-* Audio embed feature
-* Figure out how to do interstitial photos/video
-* Figure out how to manage Pym embeds --> Some sort of system with a "graphics" folder
+Access content editor login from https://montanafourthestate.org/admin.
 
-## Adding projects
+Markdown shortcodes:
 
-TODO: Figure out how to de-redundecize this, see if it's possible to work this out from CMS. Can participant data fields be replaced by data in project _index.md header? Can menus be calculated automatically?
 
-Current needs
-* Add section folder + content for stories
-* Add menu data
-* Add to data section
+
+### Inline images
+Use dropdown menu or switch from "Rich Text" to "Markdown" view and add
+```md
+![](/img/uploads/photo-slug.png)
+```
+
+
+#### Pull quotes
+Switch from "Rich Text" to "Markdown" view
+```md
+{{<pullquote>}}This is emphasized{{</pullquote>}}
+```
+
+### Audio
+Upload file, switch text editor from "Rich Text" to "Markdown" view
+```md
+{{<audio src="this-is-a-podcast.mp3">}}This is a caption{{</audio>}}
+```
+
+
+#### Pym.js graphic embeds
+Switch from "Rich Text" to "Markdown" view
+```md
+{{<pym src="https://apps.montanafreepress.org/graphics/201802-death-penalty-bill-history/" id="0">}}This is a caption{{</pym>}}
+```
+
+
+## TODO
+- Full deploy to URL + HTTPS wrangling
+- Figure out how to make audio uploadable
+- Figure out how to configure image types

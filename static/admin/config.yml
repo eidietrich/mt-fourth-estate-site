@@ -8,13 +8,12 @@ public_folder: /img/uploads
 site_url: https://montanafourthestate.org
 display_url: https://montanafourthestate.org
 
-show_preview_links: true
+editor:
+  preview: false
+show_preview_links: false
 
 yaml-definitions: &post-fields
-  - name: type
-    widget: "select"
-    options: ["story"]
-  - label: Hed
+  - label: Title
     name: title
     hint: "Title as it appears at top of page"
     widget: string
@@ -22,7 +21,6 @@ yaml-definitions: &post-fields
     name: subtitle
     widget: string
     hint: "Appears below hed at top of page; AKA dek"
-    required: false
   - label: Summary
     name: description
     hint: "Shown in social share previews, search results + on project page"
@@ -35,6 +33,7 @@ yaml-definitions: &post-fields
     name: pinned
     widget: boolean
     hint: Stories pinned next to featured story
+    default: false
   - label: "Featured Image"
     name: "image"
     widget: image
@@ -54,7 +53,7 @@ yaml-definitions: &post-fields
     name: "image-size"
     widget: "select"
     options: ["full", "inline", "hidden"]
-    required: false
+    default: inline
   - label: Byline
     name: byline
     widget: string
@@ -62,6 +61,10 @@ yaml-definitions: &post-fields
   - label: Body
     name: body
     widget: markdown
+  - name: type
+    widget: string
+    default: "story"
+    hint: "Don't change this! (Must be \"story\")"
 
 collections:
   - label: Graying Pains stories

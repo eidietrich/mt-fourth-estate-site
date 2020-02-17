@@ -1,7 +1,7 @@
 </div>
     <div class="box">
         {{ $filename := .Get "src" }}
-        {{ $path := printf "audio/%s" $filename }}
+        {{ $path := printf "img/uploads/%s" $filename }}
         {{ $description := .Inner }}
         {{ partial "audio-block.html" $path }}
         <p class="is-size-6 is-italic">{{ $description }}</p>
