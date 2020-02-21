@@ -1,0 +1,50 @@
+{{ $featured := .Page }}
+{{ $featuredParams := partialCached "page-params.html" .Page .RelPermalink }}
+
+    {{ $heroName := $featured.Page.Param "image" }}
+    {{ $heroCredit := $featured.Page.Param "image-credit" }}
+    {{ $heroDescription := $featured.Page.Param "image-description" }}
+    {{ $imgOpts := dict "filename" $heroName }}
+    {{ $imgOpts = dict "credit" $heroCredit | merge $imgOpts }}
+    {{ $imgOpts = dict "description" $heroDescription | merge $imgOpts }}
+    {{ $imgOpts = dict "link" $featured.RelPermalink | merge $imgOpts }}
+    {{ $imgOpts = dict "widthRatio" 16 | merge $imgOpts }}
+    {{ $imgOpts = dict "heightRatio" 9 | merge $imgOpts }}
+    {{ $imgOpts = dict "sizeHint" "50vw" | merge $imgOpts }}
+
+    <div class="tile is-vertical is-parent is-bottom-tablet">
+        <div class="tile is-child">
+            {{/*  <span class="tags">
+                <span class="tag is-square is-black is-uppercase has-text-weight-semibold">
+                {{ $featuredParams.kicker | default "News" }}
+                </span>
+            </span>  */}}
+            <h1 class="title is-spaced is-size-3-touch has-margin-top-thin">
+                <a href="{{ $featured.RelPermalink }}" class="has-text-black hover-underline">
+                {{ $featured.LinkTitle }}
+                </a>
+            </h1>
+        </div>
+        <article class="tile is-child">
+            {{ partial "image-block.html" $imgOpts }}
+        </article>
+        <article class="tile is-child">
+            
+            {{/*  {{ if $featured.Params.subtitle }}
+                <h2 class="subtitle is-5 is-size-4-mobile is-size-4-widescreen has-margin-top-negative-medium">
+                {{ $featured.Params.subtitle }}
+                </h2>
+            {{ end }}  */}}
+            {{ if $featuredParams.byline }}
+                <h3 class="subtitle has-margin-top-negative-medium is-6 is-size-5-mobile is-size-5-widescreen has-text-weight-normal">
+                    by {{ $featuredParams.byline }}
+                </h3>
+            {{ end }}
+            {{ if $featuredParams.description }}
+                <h2 class="subtitle is-5 is-size-4-widescreen has-margin-top-negative-medium">
+                {{ $featuredParams.description }}
+                </h2>
+            {{ end }}
+        
+        </article>
+    </div>

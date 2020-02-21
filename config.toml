@@ -57,10 +57,10 @@ notAlternative = true
 [params]
     imgproxy = "/imgproxy/"
     title = ""
-    favicon = "/img/logos/circle-black-on-trans-920.png"
-    touch-icon = "/img/logos/square-white-on-black-920.png"
+    favicon = "/img/logos/mt4-dark-on-trans.png"
+    touch-icon = "/img/logos/mt4-dark-on-white.png"
     images = [
-        "2019/11/banner-white-on-capitol.jpeg"
+        "/img/logos/montana-fourth-estate.png"
     ]
     description = "Description TK"
     extra-footer = ""

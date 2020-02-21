@@ -26,7 +26,7 @@
       {{ with $featured }}
       <div class="column is-half" style="border: 3px solid {{ $projectColor }}">
         {{ range $page := $featured }}
-          {{ partial "featured-story-tile.html" $page }}
+          {{ partial "featured-story.html" $page }}
         {{ end }}
       </div>
       {{ end }}
@@ -34,7 +34,7 @@
         <div class="column is-one-quarter is-ancestor" style="background:{{ $projectColor }}">  
           <div class="tile is-parent is-vertical">
             {{ range $page := . }}
-              {{ partial "pinned-story-tile.html" $page }}
+              {{ partial "pinned-story-list.html" $page }}
             {{ end }}
           </div>        
         </div>
@@ -61,7 +61,7 @@
       <div class="tile is-ancestor is-vertical">
         
         {{ range $page := $others }}
-          {{ partial "tile-archive.html" $page }}
+          {{ partial "story-list.html" $page }}
         {{ end }}
       </div>
       <!-- Pagination -->

@@ -16,9 +16,14 @@
   <script src="{{ $js.RelPermalink }}" defer></script>
 {{ end }}
 
-{{ range slice "500" "800" }}
+{{/*  {{ range slice "500" "800" }}
   <link rel="preload" as="font" href="/css/fonts/raleway-v13/raleway-v13-latin-ext_latin-{{ . }}.woff2" crossorigin>
-{{ end }}
+{{ end }}  */}}
+
+<link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Martel&display=swap" rel="stylesheet" crossorigin> 
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+
+{{/*  <link rel="preload" as="font" href="/css/fonts/raleway-v13/raleway-v13-latin-ext_latin-{{ . }}.woff2" crossorigin>  */}}
 
 {{ template "_internal/google_analytics_async.html" . }}
 

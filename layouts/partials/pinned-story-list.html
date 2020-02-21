@@ -1,0 +1,28 @@
+{{ $params := partialCached "page-params.html" .Page .RelPermalink }}
+
+<article class="tile is-child">
+    <!-- <div class="tile is-parent is-12 is-bottom-tablet"> -->
+      <div class="">
+        {{ $name := .Page.Param "image" }}
+        {{ $credit := .Page.Param "image-credit" }}
+        {{ $description := .Page.Param "image-description" }}
+        {{ $imgOpts := dict "filename" $name }}
+        {{ $imgOpts = dict "credit" $credit | merge $imgOpts }}
+        {{ $imgOpts = dict "description" $description | merge $imgOpts }}
+        {{ $imgOpts = dict "link" .RelPermalink | merge $imgOpts }}
+        {{ $imgOpts = dict "widthRatio" 16 | merge $imgOpts }}
+        {{ $imgOpts = dict "heightRatio" 9 | merge $imgOpts }}
+        {{ $imgOpts = dict "sizeHint" "15vw" | merge $imgOpts }}
+        {{ partial "image-block.html" $imgOpts }}
+        <h2 class="title is-spaced is-4 has-margin-top-thin-tablet">
+          <a class="has-text-black hover-underline" href="{{ .RelPermalink }}">
+            {{ .LinkTitle }}
+          </a>
+        </h2>
+        {{ if $params.byline }}
+          <h3 class="subtitle has-margin-top-negative-medium is-5 has-text-weight-normal">
+            by {{ $params.byline }}
+          </h3>
+        {{ end }}
+      </div>
+</article>
