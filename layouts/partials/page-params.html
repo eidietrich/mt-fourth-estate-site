@@ -23,4 +23,11 @@
   {{ $params = dict "published" $pub "publishedISO" $iso | merge $params }}
 {{ end }}
 
+{{ with .Param "republication" }}
+  {{ $repub := partial "date-apstyle.html" . }}
+  {{ $isoFormat := "2006-01-02T15:04:05Z07:00" }}
+  {{ $iso := .Format $isoFormat }}
+  {{ $params = dict "republication" $repub "republicationISO" $iso | merge $params }}
+{{ end }}
+
 {{ return $params }}

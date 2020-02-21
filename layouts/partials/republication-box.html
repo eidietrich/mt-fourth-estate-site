@@ -1,0 +1,7 @@
+{{ $params := . }}
+{{ with $params.republication }}
+    <footer class="block box">
+        <h3 class="title is-4">Republish this piece</h3>
+        <div>Republication message TK. Available {{ $params.republication }}. <a href="/republication/">More information.</a></div>
+    </footer>
+{{ end }}

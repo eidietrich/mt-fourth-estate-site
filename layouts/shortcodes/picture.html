@@ -1,20 +1,20 @@
 <!-- God forgive me -->
 </div>
 
-<div class="box">
-{{ $src := .Get "src" }}
-{{ $credit := .Get "credit" }}
-{{ $description := .Get "description" }}
+<div>
+  {{ $src := .Get "src" }}
+  {{ $credit := .Get "credit" }}
+  {{ $description := .Get "description" }}
 
-{{ $imgOpts := dict "filename" $src }}
-{{ $imgOpts = dict "credit" $credit | merge $imgOpts }}
-{{ $imgOpts = dict "description" $description | merge $imgOpts }}
-{{ $imgOpts = dict "widthRatio" 3 | merge $imgOpts }}
-{{ $imgOpts = dict "heightRatio" 2 | merge $imgOpts }}
-{{ $imgOpts = dict "sizeHint" "50vw" | merge $imgOpts }}
-{{ $imgOpts = dict "figClass" "has-margin-bottom" | merge $imgOpts }}
-{{ $imgOpts | partial "image-block.html" }}
+  {{ $imgOpts := dict "filename" (printf "/img/uploads/%s" $src) }}
+  {{ $imgOpts = dict "credit" $credit | merge $imgOpts }}
+  {{ $imgOpts = dict "description" $description | merge $imgOpts }}
+  {{ $imgOpts = dict "widthRatio" 3 | merge $imgOpts }}
+  {{ $imgOpts = dict "heightRatio" 2 | merge $imgOpts }}
+  {{ $imgOpts = dict "sizeHint" "50vw" | merge $imgOpts }}
+  {{ $imgOpts = dict "figClass" "has-margin-bottom" | merge $imgOpts }}
 
+  {{ $imgOpts | partial "image-block.html" }}
   <p class="is-size-6 is-italic">{{ $description }}</p>
 </div>
 

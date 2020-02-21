@@ -37,11 +37,7 @@
             {{ end }}  */}}
             {{ if $featuredParams.byline }}
                 <h3 class="subtitle has-margin-top-negative-medium is-6 is-size-5-mobile is-size-5-widescreen has-text-weight-normal">
-                <a
-                    href="{{ $featured.RelPermalink }}"
-                    class="has-text-grey hover-underline"
-                >by {{ $featuredParams.byline }}
-                </a>
+                    by {{ $featuredParams.byline }}
                 </h3>
             {{ end }}
             {{ if $featuredParams.description }}

@@ -59,7 +59,7 @@
         {{ with $params.byline }}
           <h3 class="is-size-5 has-margin-top-negative-medium">
             <span class="has-text-weight-semibold">
-              By {{ $params.byline }}
+              by {{ $params.byline }}
             </span>
             {{ if $params.published }}
               |
@@ -73,6 +73,20 @@
           {{ .Content }}
         </div>
       </div>
+
+      {{ with .Param "additional-credits" }}
+        <footer class="block">
+          <div class="level">
+            <div class="level-left">
+              <div class="level-item has-text-grey is-italic">
+                {{ . }}
+              </div>
+            </div>
+          </div>
+        </footer>
+      {{ end }}
+
+      {{ partial "republication-box.html" $params }}
 
       <!-- {{ with .Param "authors" }}
         <footer

@@ -11,16 +11,22 @@ url = "/about/"
 weight = 2
 
 [[main]]
+name = "Republication"
+pre = "is-uppercase"
+url = "/republication/"
+weight = 3
+
+[[main]]
 name = "Graying Pains"
 pre = "is-uppercase"
 url = "/graying-pains/"
-weight = 3
+weight = 4
 
 # [[main]]
 # name = "Project 2 TK"
 # pre = "is-uppercase"
 # url = "/project-2/"
-# weight = 4
+# weight = 5
 
 # Footer col 1
 
@@ -35,6 +41,12 @@ name = "About"
 pre = "is-uppercase"
 url = "/about/"
 weight = 2
+
+[[footer]]
+name = "Republication"
+pre = "is-uppercase"
+url = "/republication/"
+weight = 3
 
 # Footer col 2
 

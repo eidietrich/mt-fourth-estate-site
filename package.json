@@ -1,9 +1,9 @@
 {
   "name": "poor-richard",
   "version": "0.0.1",
-  "description": "Static website for Spotlight PA",
-  "repository": "git@github.com:spotlightpa/poor-richard.git",
-  "author": "Spotlight PA",
+  "description": "Static website for Montana Fourth Estate Project, adapted from Spotlight PA's Poor Richard",
+  "repository": "github.com/eidietrich/mt-fourth-estate-site",
+  "author": "Eric Dietrich",
   "license": "MIT",
   "scripts": {
     "format": "yarn run format:eslint; yarn run format:prettier",

@@ -24,19 +24,29 @@ yaml-definitions: &post-fields
     name: subtitle
     widget: string
     required: false
-    hint: "Appears below hed at top of page; AKA dek"
+    hint: "Appears below title at top of page if set"
   - label: Summary
     name: description
-    hint: "Shown in social share previews, search results + on project page"
+    hint: "Shown in social share previews, search results & website story summaries"
     widget: string
   - label: Date
     name: published
     widget: datetime
     hint: "Note that future dated articles will not be published on the live site"
+  - label: Republication Date
+    name: republished
+    widget: datetime
+    hint: "If set, will display in republication box at bottom of story. Defaults to today."
+    required: false
+  - label: Featured
+    name: featured
+    widget: boolean
+    default: true
+    hint: Set as project featured story (most recent story set as featured displays)
   - label: Pinned
     name: pinned
     widget: boolean
-    hint: Stories pinned next to featured story
+    hint: Stories pinned next to featured story on project page
     default: false
   - label: "Featured Image"
     name: "image"
@@ -45,26 +55,31 @@ yaml-definitions: &post-fields
     media_library:
       config:
         multiple: false
-  - label: Image description
+  - label: Featured image description
     name: image-description
     widget: string
-    required: false
-  - label: Image credit
+  - label: Featured image credit
     name: image-credit
     widget: string
     required: false
-  - label: "Image size"
+  - label: "Featured image display"
     name: "image-size"
     widget: "select"
-    options: ["full", "inline", "hidden"]
+    options: ["inline", "hidden"]
     default: inline
   - label: Byline
     name: byline
     widget: string
-    hint: "e.g. Jane Doe / Montana Free Press"
+    hint: "e.g. Jane Doe, Montana Free Press"
+  - label: Additional Credits
+    name: additional-credits
+    widget: string
+    required: false
+    hint: "Displayed as text in italics at bottom of story"
   - label: Body
     name: body
     widget: markdown
+    hint: Add inline images/graphics/audio with {{<shortcodes src="src-url">}} in markdown view.
 
 collections:
   - label: Graying Pains stories
