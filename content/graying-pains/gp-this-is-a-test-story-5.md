@@ -13,3 +13,14 @@ byline = "XXX"
 additional-credits = "Additional credits check"
 +++
 Row row row your boat.
+
+{{<pym src="https://apps.montanafreepress.org/graphics/201802-death-penalty-bill-history/" id="0">}}This is a caption{{</pym>}}
+
+Row row row your boat.
+
+{{<pym src="https://apps.montanafreepress.org/graphics/201802-death-penalty-bill-history/" id="0">}}This is a caption{{</pym>}}
+
+Row row row your boat.
+
+{{<pym src="https://apps.montanafreepress.org/graphics/201802-death-penalty-bill-history/" id="0">}}This is a caption{{</pym>}}
+
