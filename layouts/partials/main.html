@@ -9,23 +9,23 @@
       {{ $projects := where .Site.Sections "Params.type" "project" }}
       {{ $project := index (where $projects "Params.url" (printf "/%s/" $projectName)) 0}}
 
-      {{ if $params.showTitle }}
-        <header class="block">
-          {{ if $projectName }}
-          <a href="{{ $project.Permalink }}">
-            <p
-              class="tag is-square is-black is-uppercase has-text-weight-semibold has-margin-bottom-thin"
-              style="background-color: {{ $project.Params.color }};"
-            >
-              {{ replace $projectName "-" " "}}
-            </p>
-          </a>
+        {{ if $params.showTitle }}
+          <header class="block">
+            {{ if eq $project.Params.type "project" }}
+            <a href="{{ $project.Permalink }}">
+              <p
+                class="tag is-square is-black is-uppercase has-text-weight-semibold has-margin-bottom-thin"
+                style="background-color: {{ $project.Params.color }};"
+              >
+                {{ replace $projectName "-" " "}}
+              </p>
+            </a>
           {{ else }}
-            <div class="is-clearfix">
+            {{/*  <div class="is-clearfix">
               <div class="is-pulled-right" data-ga-action="Header breadcrumbs">
                 {{ partial "breadcrumbs.html" . }}
               </div>
-            </div>
+            </div>  */}}
           {{ end }}
 
           <h1 class="title is-2 is-size-3-touch is-spaced">
@@ -57,12 +57,12 @@
         data-ga-action="Main content"
       >
         {{ with $params.byline }}
-          <h3 class="is-size-5 has-margin-top-negative-medium">
+          <h3 class="is-size-4 has-margin-bottom">
             <span class="has-text-weight-semibold">
               by {{ $params.byline }}
             </span>
             {{ if $params.published }}
-              |
+              <br/>
               <time
                 datetime='{{ $params.publishedISO }}'
               >{{ $params.published }}</time>

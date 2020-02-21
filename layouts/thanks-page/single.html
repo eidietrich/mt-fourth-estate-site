@@ -1,9 +1,0 @@
-{{ define "main" }}
-  {{ $subtitle := .Param "subtitle" }}
-  {{ $dict := dict "class" "is-primary" "title" .Title "subtitle" $subtitle "content" .Content }}
-  {{ partial "message-block.html" $dict }}
-{{ end }}
-
-{{ define "promo" }}
-  <!-- noop -->
-{{ end }}

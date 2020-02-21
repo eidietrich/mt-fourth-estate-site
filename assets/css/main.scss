@@ -69,7 +69,9 @@ $weight-normal: 500;
 $weight-medium: 600;
 $weight-semibold: 800;
 $weight-bold: 900;
-$family-sans-serif: "Raleway", Helvetica, Arial, sans-serif;
+$family-sans-serif: Arial, sans-serif;
+$family-serif: 'Martel', Georgia, serif;
+$family-primary: $family-serif;
 
 $title-color: $black;
 $title-size: 2rem;
@@ -89,6 +91,10 @@ body {
   > footer {
     margin-top: auto;
   }
+}
+
+audio {
+  width: 100%;
 }
 
 .has-bg-image {
@@ -297,6 +303,13 @@ $margin-sizes: (
       margin-#{$dir}: $size;
     }
   }
+}
+
+.has-margin-bottom {
+  margin-bottom: 1em;
+}
+.has-margin-top {
+  margin-top: 1em;
 }
 
 .has-margin-top-negative {
