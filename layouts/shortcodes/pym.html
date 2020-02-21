@@ -1,8 +1,9 @@
+{{/*  Set unique ID for shortcode */}}
+{{ $id := .Ordinal }}
 </div>
     <div class="box">
         {{ $src := .Get "src" }}
-        {{ $id := .Get "id" }}
-        {{ $config := dict "src" $src "id" $id}}
+        {{ $config := dict "src" $src "id" $id }}
 
         {{ $description := .Inner }}
         {{ partial "pym-block.html" $config }}
