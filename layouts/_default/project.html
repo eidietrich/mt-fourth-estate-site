@@ -16,18 +16,20 @@
 {{ end }}
 
 {{ define "main" }}
-  {{ $stories := .Paginator.Pages }}
-  {{ $featured := first 1 $stories }}
-  {{ $pinned := where ($stories | complement $featured)  "Params.pinned" true }}
+  {{ $stories := sort .Paginator.Pages "Params.order" }}
+  {{ $featured := first 1 (where $stories "Params.featured" true) }}
+  {{ $pinned :=  first 2 (where ($stories | complement $featured) "Params.pinned" true) }}
   {{ $projectColor := .Params.color | default "#bbb" }}
 
   <section class="section">
     <article class="columns is-centered is-multiline">
+      {{ with $featured }}
       <div class="column is-half" style="border: 3px solid {{ $projectColor }}">
         {{ range $page := $featured }}
           {{ partial "featured-story-tile.html" $page }}
         {{ end }}
       </div>
+      {{ end }}
       {{ with $pinned }}
         <div class="column is-one-quarter is-ancestor" style="background:{{ $projectColor }}">  
           <div class="tile is-parent is-vertical">
@@ -44,8 +46,8 @@
 
 {{ define "extra-main" }}
   {{ $stories := sort .Paginator.Pages "Params.order" }}
-  {{ $featured := first 1 $stories  }}
-  {{ $pinned :=  where $stories  "Params.pinned" true }}
+  {{ $featured := first 1 (where $stories "Params.featured" true) }}
+  {{ $pinned :=  first 2 (where ($stories | complement $featured) "Params.pinned" true) }}
   {{ $others := $stories | complement $featured $pinned }}
   {{ $paginator := .Paginate $others}}
 

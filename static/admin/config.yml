@@ -42,11 +42,11 @@ yaml-definitions: &post-fields
     name: featured
     widget: boolean
     default: true
-    hint: Set as project featured story (most recent story set as featured displays)
+    hint: Set as project featured story. Most recent story set as featured displays. Others should filter into story list.
   - label: Pinned
     name: pinned
     widget: boolean
-    hint: Stories pinned next to featured story on project page
+    hint: Stories pinned next to featured story on project page. Most recent pinned stories, up to 2, display. Others should filter into story list.
     default: false
   - label: "Featured Image"
     name: "image"
