@@ -33,11 +33,11 @@ yaml-definitions: &post-fields
     name: published
     widget: datetime
     hint: "Note that future dated articles will not be published on the live site"
-  - label: Republication Date
-    name: republished
-    widget: datetime
-    hint: "If set, will display in republication box at bottom of story. Defaults to today."
-    required: false
+  # - label: Republication Date
+  #   name: republished
+  #   widget: datetime
+  #   hint: "If set, will display in republication box at bottom of story. Defaults to today."
+  #   required: false
   - label: Featured
     name: featured
     widget: boolean

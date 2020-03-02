@@ -1,7 +1,16 @@
 {{ $params := . }}
+{{ with eq .type "article"}}
+    <footer class="block box">
+        <h3 class="title is-4">Republish this piece</h3>
+        <p>This story is available for free re-publication starting two weeks after its initial publication. See <a href="/republication/">here</a> for more information.</a></p>
+    </footer>
+{{ end }}
+<!-- 
 {{ with $params.republication }}
     <footer class="block box">
         <h3 class="title is-4">Republish this piece</h3>
-        <div>Republication message TK. Available {{ $params.republication }}. <a href="/republication/">More information.</a></div>
+        <p>
+            Montana Fourth Estate stories are available for free re-publication by any Montana news outlet starting two weeks after the story’s initial publication (<strong>{{ $params.republication }}</strong> for this piece). See <a href="/republication/">here</a> for more information.</a>
+        </p>
     </footer>
-{{ end }}
+{{ end }} -->

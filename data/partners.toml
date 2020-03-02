@@ -10,11 +10,11 @@ slug = "valley-journal"
 url = "http://www.valleyjournal.net/"
 logotype = "png"
 
-[[partners]]
-name = "Sidney Herald"
-slug = "sidney-herald"
-url = "https://www.sidneyherald.com/"
-logotype = "png"
+# [[partners]]
+# name = "Sidney Herald"
+# slug = "sidney-herald"
+# url = "https://www.sidneyherald.com/"
+# logotype = "png"
 
 [[partners]]
 name = "Glendive Ranger-Review"

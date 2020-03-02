@@ -62,6 +62,8 @@
             <a href="/about">>> Learn more</a>
           </div>
         </div>
+
+        <hr />
         
 
         {{/*  <div>{{ .Content }}</div>  */}}
@@ -108,11 +110,19 @@
               {{ $project.Set "subtitle" .Params.subtitle }}
               {{ $project.Set "logotype" .Params.logotype }}
               {{ printf "img/projects/%s.%s" .Params.logoslug .Params.logotype | $project.Set "logo" }}
+              <hr />
               {{ partial "project-banner-homepage-non-featured.html" $project }}
             {{ end }}
           {{ end }}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <hr />
+  <div class="has-text-grey has-text-right">
+    Header photos: Eric Dietrich; Adobe Stock; Mark Moss
   </div>
 </section>

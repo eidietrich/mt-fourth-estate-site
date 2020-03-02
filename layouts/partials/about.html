@@ -1,9 +1,13 @@
-{{ $bgImg := resources.Get "/img/bgs/old-cabin-darkened-3.png" }}
+{{ $bgImg := resources.Get "/img/bgs/journalists-working.jpg" }}
 {{ $bgImg = $bgImg.Resize "1200x" | fingerprint }}
 <style>
 #about-hero {
   background-image: url('{{ $bgImg.RelPermalink }}');
   background-position: 80%;
+  max-width: 1000px;
+  margin: 1em auto;
+  min-height: 400px;
+  text-shadow: 2px 2px 5px #222;
 }
 </style>
 <section

@@ -2,7 +2,7 @@
 linktitle = "Home"
 title = "The Montana Fourth Estate Project"
 subtitle = ""
-tagline = "Montana news outlets teaming up to tackle the state's toughest issues by investigating solutions."
-description = "The Montana Fourth Estate: Montana news outlets teaming up to tackle the state's toughest issues by investigating solutions"
+tagline = "A statewide collaboration of journalists working together to give Montanans more of the story"
+description = "A statewide collaboration of journalists working together to give Montanans more of the story"
 title-tag = "The Montana Fourth Estate"
 +++
