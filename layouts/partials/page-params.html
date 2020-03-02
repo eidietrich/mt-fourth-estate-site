@@ -14,7 +14,9 @@
 
 {{ $showTitle := .Param "suppress-title" | not }}
 
-{{ $params := dict "byline" $byline "kicker" $kicker "dek" $dek "description" $description "showTitle" $showTitle }}
+{{ $type := .Param "type"}}
+
+{{ $params := dict "byline" $byline "kicker" $kicker "dek" $dek "description" $description "showTitle" $showTitle "type" $type }}
 
 {{ with .PublishDate }}
   {{ $pub := partial "date-apstyle.html" .Local }}
