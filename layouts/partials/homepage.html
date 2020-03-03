@@ -11,9 +11,9 @@
 <style>
 #homepage-hero {
   background-image: url('{{ $bgImg.RelPermalink }}');
-  background-position: 80%;
-  width: 100%;
-  height: 300px;
+  // background-position: 80%;
+  // width: 100%;
+  height: 200px;
 
   display: flex;
   flex-direction: column;
@@ -40,38 +40,30 @@
 
 <section class="section" data-ga-action="Homepage link">  
     <div class="container-hp">
-    <div class="tile is-ancestor is-vertical">
-
-      {{/*  <div style="border: 1px solid red; margin-bottom: 2em;">  */}}
-        <div
-          id="homepage-hero"
-          class="hero has-bg-image is-on-gradient is-black has-background-link"
-        >
-          {{/*  <div class="homepage-hero-container">
-              <h1 class="title has-text-white has-text-weight-bold is-size-1 is-size-2-mobile">
-                {{ .Title }}
-              </h1>
-          </div>  */}}
-        </div>
-        <h1 class="title has-text-weight-bold has-text-centered is-size-1 is-size-2-mobile has-margin-top">
-          {{ .Title }}
-        </h1>
-        <div>
-          <h3 class="has-text-centered is-size-3 is-size-4-mobile block">{{ .Params.tagline }} </h3>
-          <div class="subtitle has-text-centered">
-            <a href="/about">>> Learn more</a>
+      <div class="columns">
+        <div class="column is-full">
+          <div
+            id="homepage-hero"
+            class="hero has-bg-image is-black"
+          >
+            {{/*  <div class="homepage-hero-container">
+                <h1 class="title has-text-white has-text-weight-bold is-size-1 is-size-2-mobile">
+                  {{ .Title }}
+                </h1>
+            </div>  */}}
           </div>
+          <h1 class="title has-text-weight-bold has-text-centered is-size-1 is-size-2-mobile has-margin-top">
+            {{ .Title }}
+          </h1>
+          <div>
+            <h3 class="has-text-centered is-size-3 is-size-4-mobile block">{{ .Params.tagline }} </h3>
+            <div class="has-margin-bottom subtitle has-text-centered">
+              <a href="/about">>> Learn more</a>
+            </div>
+          </div>
+
         </div>
-
         <hr />
-        
-
-        {{/*  <div>{{ .Content }}</div>  */}}
-
-        {{/*  Debugging list of projects  */}}
-        {{/*  {{ range $projects }}
-          <li><a href="{{ .Permalink }}">{{ .Title }}</a>  {{ .Type }} {{ printf "%#v" .Params }}</li>
-        {{ end }}  */}}
       </div>
 
       {{/*  <div class="tile">
@@ -85,7 +77,7 @@
         </div>
       </div>  */}}
       
-      <div class="tile">
+      <div class="columns is-centered">
         {{ range $data := first 1 $projects }}
           {{ $project := newScratch }}
           {{ $project.Set "url" .Params.url }}
@@ -116,13 +108,13 @@
           {{ end }}
         </div>
       </div>
+
     </div>
   </div>
-</section>
 
-<section class="section">
   <hr />
   <div class="has-text-grey has-text-right">
     Header photos: Eric Dietrich; Adobe Stock; Mark Moss
   </div>
+
 </section>
