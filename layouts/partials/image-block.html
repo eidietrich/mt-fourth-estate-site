@@ -3,7 +3,8 @@
   {{ $imgs := slice }}
   {{ $widthR := .widthRatio | default 16 }}
   {{ $heightR := .heightRatio | default 9 }}
-  {{ $imgClass := printf "is-%dby%d" $widthR $heightR }}
+  <!-- {{ $imgClass := printf "is-%dby%d" $widthR $heightR }} -->
+  {{ $imgClass := ""}}
 
   {{ range $size := seq 2 16 }}
     {{ $width := mul $size 160 }}
