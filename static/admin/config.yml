@@ -58,6 +58,7 @@ yaml-definitions: &post-fields
   - label: Featured image description
     name: image-description
     widget: string
+    required: false
   - label: Featured image credit
     name: image-credit
     widget: string
