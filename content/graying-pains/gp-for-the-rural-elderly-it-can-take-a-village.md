@@ -5,12 +5,14 @@ description = "There was something special happening on a January morning at Kal
 published = 2020-03-19T20:59:39.022Z
 featured = true
 pinned = false
-image = "/img/uploads/graying-pains-logo-colorized.png"
+image = "/img/uploads/village-to-village-feature-art.jpg"
+image-description = "From left, Grace Larson, Joedy Foster, Dorothy Carr and Sue Carpenter of My Glacier Village walk together around the Gateway Community Center in Kalispell on March 3, 2020."
+image-credit = "Hunter D’Antuono,Flathead Beacon"
 image-size = "inline"
 byline = "Keith Hammonds, Boulder Monitor"
 additional-credits = "Additional reporting by Myers Reece, Flathead Beacon."
 +++
-*Editor's Note: As the COVID-19 pandemic spreads across Montana, the Graying Pains series will be taking a hiatus to allow participating newsrooms to focus on keeping their communities informed.* 
+*Dear readers — The Graying Pains series was launched last week. Following this week’s installment, we’re putting the series on hold in response to the significant re-allocation of statewide reporting resources to the emerging coronavirus story. We look forward to reintroducing the series when time allows. —Brad Tyer, MTFP editor* 
 
 It looked like a lot of senior gatherings: a chatty group of folks, mostly in their 70s and 80s, with friends and family in a church basement, dining on quiche, pastries, fresh fruit, and other goodies. There was plenty of laughter, and a strong sense of camaraderie.
 
