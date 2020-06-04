@@ -2,7 +2,7 @@
 type = "story"
 title = "Bringing knowledge and comfort to the classroom"
 subtitle = ""
-description = "At Seeley Lake Elementary, 'Grandma Pearl' is Missoula County's longest-serving foster grandparent"
+description = "At Seeley Lake Elementary, 'Grandma Pearl' is Missoula County's longest-serving foster grandparent."
 published = 2020-06-04T20:05:59.981Z
 featured = true
 pinned = false
