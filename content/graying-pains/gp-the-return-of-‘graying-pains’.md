@@ -1,7 +1,7 @@
 +++
 type = "story"
 title = "The return of ‘Graying Pains’"
-subtitle = "Statewide reporting project on aging demographics to relaunch"
+subtitle = "Statewide reporting project on aging demographics to relaunch."
 description = "Statewide reporting project on aging demographics to relaunch"
 published = 2020-05-28T19:01:25.641Z
 featured = true
