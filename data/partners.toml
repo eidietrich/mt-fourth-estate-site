@@ -47,11 +47,11 @@ slug = "missoulian"
 url = "https://missoulian.com/"
 logotype = "svg"
 
-[[partners]]
-name = "Miles City Star"
-slug = "miles-city-star"
-url = "https://www.milescitystar.com/"
-logotype = "png"
+# [[partners]]
+# name = "Miles City Star"
+# slug = "miles-city-star"
+# url = "https://www.milescitystar.com/"
+# logotype = "png"
 
 [[partners]]
 name = "Madisonian"
@@ -77,11 +77,11 @@ slug = "helena-ir"
 url = "https://helenair.com/"
 logotype = "png"
 
-[[partners]]
-name = "Flathead Beacon"
-slug = "flathead-beacon"
-url = "https://flatheadbeacon.com/"
-logotype = "png"
+# [[partners]]
+# name = "Flathead Beacon"
+# slug = "flathead-beacon"
+# url = "https://flatheadbeacon.com/"
+# logotype = "png"
 
 [[partners]]
 name = "Choteau Acantha"
@@ -89,11 +89,11 @@ slug = "choteau-acantha"
 url = "http://www.choteauacantha.com/"
 logotype = "png"
 
-[[partners]]
-name = "Bozeman Daily Chronicle"
-slug = "bozeman-daily-chronicle"
-url = "https://www.bozemandailychronicle.com/"
-logotype = "png"
+# [[partners]]
+# name = "Bozeman Daily Chronicle"
+# slug = "bozeman-daily-chronicle"
+# url = "https://www.bozemandailychronicle.com/"
+# logotype = "png"
 
 [[partners]]
 name = "Billings Gazette"
