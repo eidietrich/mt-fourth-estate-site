@@ -2,7 +2,7 @@
 type = "story"
 title = "Farm to future"
 subtitle = "Montana’s family farms and ranches face uncertainties as producers age toward retirement."
-description = "With more than half of all ag producers in Montana either past or close to retirement age, family farms face a demographic reckoning.. "
+description = "With more than half of all ag producers in Montana either past or close to retirement age, family farms face a demographic reckoning. "
 published = 2020-06-23T18:45:46.228Z
 featured = true
 pinned = false
