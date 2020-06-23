@@ -36,11 +36,7 @@ Between 2012 and 2017, the USDA estimated the number of agriculture operations o
 
 "That's the reality of egg production in the U.S.," Spencer said. "I'm the exception."
 
-
-
-### **AG PRODUCERS AGING OUT**
-
-
+#### **AG PRODUCERS AGING OUT**
 
 Spencer's career in poultry began on his eighth birthday. His father, a poultry farmer in upstate New York, gave him some chicks as a present. He has been raising birds ever since, the first 25 years of which were for fly-tying purposes only.
 
@@ -90,11 +86,7 @@ Another barrier preventing that passing of the torch is land prices. The USDA re
 
 The cost alone can be prohibitive for young producers.
 
-
-
-### **CONNECTING WITH YOUNG BUYERS**
-
-
+#### **CONNECTING WITH YOUNG BUYERS**
 
 Missoula resident Ellie Costello grows vegetables she incorporates into soups that she sells. She also grows garlic and flowers. She has been growing the vegetables on other people’s land, devising rental agreements with each landowner, which does not always work out well.
 
