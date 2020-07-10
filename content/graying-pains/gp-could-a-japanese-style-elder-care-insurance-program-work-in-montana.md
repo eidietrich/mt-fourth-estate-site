@@ -11,7 +11,7 @@ image-credit = "Adobe stock/license required"
 image-size = "inline"
 byline = "David Erickson, Missoulian"
 +++
-Last week in Graying Pains, the Missoulian’s David Erickson examined the introduction and implementation of Kaigo Hoken, or care insurance, in Japan, the world’s demographically oldest country. This week’s conclusion of that story explores how a similar policy might translate to Montana, the oldest state in the American West.
+*Last week in Graying Pains, the Missoulian’s David Erickson examined [the introduction and implementation of Kaigo Hoken, or care insurance, in Japan, the world’s demographically oldest country](https://montanafourthestate.org/graying-pains/gp-how-the-worlds-oldest-nation-cares-for-its-elderly/). This week’s conclusion of that story explores how a similar policy might translate to Montana, the oldest state in the American West.*
 
 A full 13% of Montanans are in their 60s, and the “baby boomer” generation is nearing or entering retirement age. Care for the elderly will become an increasingly pressing issue in Montana as larger and larger numbers of voters enter the older brackets of the state’s demographics.
 
