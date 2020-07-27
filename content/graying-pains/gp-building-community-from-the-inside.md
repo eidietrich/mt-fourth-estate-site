@@ -23,11 +23,7 @@ Area Agencies that have embedded trained, knowledgeable, local information assis
 
 “There are numerous resources, both government and private, available to help with taxes, transportation, caregiving, retirement, housing, medical services and many other needs,” said Carla Schade, past president of the Seeley Lake Community Foundation. “However, knowing where to find these problem solvers and how to negotiate their sometimes-complicated access can be extremely difficult and time-consuming. By having someone here in our community with the training and expertise to assist people, many situations can be addressed and often solved.”
 
-
-
 **MONTANA AGENCIES ON AGING**
-
-
 
 The Older Americans Act of 1965 established the U.S. Administration on Aging and the state Agencies on Aging to address the social service needs of older citizens. In Montana, the Aging Services Bureau of the Senior and Long-Term Care Division of the Department of Public Health and Human Services administers federal grants and any additional funds authorized by the state Legislature.
 
@@ -45,11 +41,9 @@ In the 2019 fiscal year, Montana Area Agencies on Aging served 15,594 clients, l
 
 As the state’s aging population continues to increase, Area Aging directors point to funding as the biggest limitation on their ability to meet clients’ needs, saying federal funding has not kept pace with the increase in service demands. The problem is amplified in rural areas because per capita costs for goods and services are higher.
 
-“Ultimately there needs to be some new options on how we are going to serve those most isolated people,” said Tom Wood, executive director of the Area VI Agency on Aging in Polson.
+“Ultimately there needs to be some new options on how we are going to serve those most isolated people,” said Todd Wood, executive director of the Area VI Agency on Aging in Polson.
 
 “We can’t be urban-centric and make things work in Montana,” said Jim Marks, the Area IV Agency on Aging program director in Helena. “You need to be very integrated and implemented to find the solutions to age in place.”
-
-
 
 **FROM INFORMATION ASSISTANCE TO RESOURCE SPECIALIST** 
 
