@@ -1,7 +1,7 @@
 +++
 type = "story"
 title = "Passing the volunteer torch"
-description = "As a generation of community volunteers ages, transition planning becomes key"
+description = "As a generation of community volunteers ages, transition planning becomes key."
 published = 2020-08-20T15:05:48.133Z
 featured = true
 pinned = false
